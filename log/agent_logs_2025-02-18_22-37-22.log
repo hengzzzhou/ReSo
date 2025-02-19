@@ -1,0 +1,1031 @@
+2025-02-18 22:37:22,989 - INFO - Dataset loaded successfully with 90 samples.
+2025-02-18 22:37:22,990 - INFO - Running Mode: gt | Random: False | Dataset: datasets/MATH-MAS/MATH-MAS-Easy.json
+2025-02-18 22:37:23,269 - INFO - Top-K selection: 1
+2025-02-18 22:37:23,290 - INFO - Processing sample 1
+2025-02-18 22:37:23,290 - INFO - Ground Truth Subtasks: [233.0, 20.0, 64.0, 298240.0]
+2025-02-18 22:37:35,922 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:37:40,667 - INFO - [TEST MODE] Voted numerical answer: 233.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002589, prompt_len: 93, completion_len: 624
+2025-02-18 22:37:46,857 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:37:49,989 - INFO - [TEST MODE] Voted numerical answer: 20.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001999, prompt_len: 859, completion_len: 285
+2025-02-18 22:37:54,954 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:03,915 - INFO - [TEST MODE] Voted numerical answer: 64.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.006063000000000001, prompt_len: 1283, completion_len: 1195
+2025-02-18 22:38:08,823 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:11,116 - INFO - [TEST MODE] Voted numerical answer: 298240.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002706, prompt_len: 2338, completion_len: 92
+2025-02-18 22:38:11,116 - INFO - Accuracy: 1.000, Cost: 0.013
+2025-02-18 22:38:11,116 - INFO - Processing sample 2
+2025-02-18 22:38:11,116 - INFO - Ground Truth Subtasks: [6.0, 62.0, 111.0, 41292.0]
+2025-02-18 22:38:17,397 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:23,237 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003715, prompt_len: 135, completion_len: 895
+2025-02-18 22:38:30,168 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:36,249 - INFO - [TEST MODE] Voted numerical answer: 98.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002927, prompt_len: 1031, completion_len: 474
+2025-02-18 22:38:41,097 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:44,379 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002917, prompt_len: 1637, completion_len: 320
+2025-02-18 22:38:46,688 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:48,748 - INFO - [TEST MODE] Voted numerical answer: 5880.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025659999999999997, prompt_len: 2054, completion_len: 128
+2025-02-18 22:38:48,748 - INFO - Accuracy: 0.500, Cost: 0.012
+2025-02-18 22:38:48,749 - INFO - Processing sample 3
+2025-02-18 22:38:48,749 - INFO - Ground Truth Subtasks: [13.0, 2.0, 5.0, 130.0]
+2025-02-18 22:38:54,780 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:38:57,687 - INFO - [TEST MODE] Voted numerical answer: 13.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001422, prompt_len: 134, completion_len: 322
+2025-02-18 22:39:02,496 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:39:06,968 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002552, prompt_len: 560, completion_len: 498
+2025-02-18 22:39:11,344 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:39:59,755 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.006803999999999999, prompt_len: 1776, completion_len: 1059
+2025-02-18 22:40:09,585 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:11,616 - INFO - [TEST MODE] Voted numerical answer: 130.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002376, prompt_len: 1964, completion_len: 103
+2025-02-18 22:40:11,616 - INFO - Accuracy: 0.667, Cost: 0.013
+2025-02-18 22:40:11,617 - INFO - Processing sample 4
+2025-02-18 22:40:11,617 - INFO - Ground Truth Subtasks: [12.0, 28.0, 5.0, 1680.0]
+2025-02-18 22:40:16,695 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:22,952 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0038320000000000003, prompt_len: 136, completion_len: 924
+2025-02-18 22:40:26,352 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:29,711 - INFO - [TEST MODE] Voted numerical answer: 28.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002499, prompt_len: 1095, completion_len: 351
+2025-02-18 22:40:34,748 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:39,058 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003565, prompt_len: 1613, completion_len: 488
+2025-02-18 22:40:42,975 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:44,443 - INFO - [TEST MODE] Voted numerical answer: 1680.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002349, prompt_len: 2021, completion_len: 82
+2025-02-18 22:40:44,443 - INFO - Accuracy: 0.750, Cost: 0.012
+2025-02-18 22:40:44,443 - INFO - Processing sample 5
+2025-02-18 22:40:44,443 - INFO - Ground Truth Subtasks: [-6.0, -3.0, 5.0, 90.0]
+2025-02-18 22:40:47,180 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:40:51,689 - INFO - [TEST MODE] Voted numerical answer: -6.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0025440000000000003, prompt_len: 148, completion_len: 599
+2025-02-18 22:41:30,355 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:41:33,578 - INFO - [TEST MODE] Voted numerical answer: -3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002787, prompt_len: 1575, completion_len: 303
+2025-02-18 22:41:35,837 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:41:39,411 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003653, prompt_len: 2065, completion_len: 397
+2025-02-18 22:41:41,752 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:41:43,240 - INFO - [TEST MODE] Voted numerical answer: 90.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002917, prompt_len: 2589, completion_len: 82
+2025-02-18 22:41:43,240 - INFO - Accuracy: 0.800, Cost: 0.012
+2025-02-18 22:41:43,241 - INFO - Processing sample 6
+2025-02-18 22:41:43,241 - INFO - Ground Truth Subtasks: [16.0, 60.0, 21.0, 20160.0]
+2025-02-18 22:41:48,764 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:41:57,082 - INFO - [TEST MODE] Voted numerical answer: 16.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004409, prompt_len: 125, completion_len: 1071
+2025-02-18 22:42:11,282 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:14,369 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025960000000000002, prompt_len: 1252, completion_len: 336
+2025-02-18 22:42:17,272 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:20,482 - INFO - [TEST MODE] Voted numerical answer: 21.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.00321, prompt_len: 1766, completion_len: 361
+2025-02-18 22:42:23,398 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:25,235 - INFO - [TEST MODE] Voted numerical answer: 20160.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002548, prompt_len: 2164, completion_len: 96
+2025-02-18 22:42:25,235 - INFO - Accuracy: 0.833, Cost: 0.013
+2025-02-18 22:42:25,235 - INFO - Processing sample 7
+2025-02-18 22:42:25,235 - INFO - Ground Truth Subtasks: [-2.0, 10455.0, 9.0, -188190.0]
+2025-02-18 22:42:28,648 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:30,699 - INFO - [TEST MODE] Voted numerical answer: -2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.000869, prompt_len: 121, completion_len: 187
+2025-02-18 22:42:37,773 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:40,466 - INFO - [TEST MODE] Voted numerical answer: 10455.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001478, prompt_len: 446, completion_len: 258
+2025-02-18 22:42:47,593 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:51,636 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003209, prompt_len: 981, completion_len: 557
+2025-02-18 22:42:57,230 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:42:59,044 - INFO - [TEST MODE] Voted numerical answer: -188190.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0020800000000000003, prompt_len: 1576, completion_len: 126
+2025-02-18 22:42:59,044 - INFO - Accuracy: 0.857, Cost: 0.008
+2025-02-18 22:42:59,044 - INFO - Processing sample 8
+2025-02-18 22:42:59,044 - INFO - Ground Truth Subtasks: [11.0, 45.0, 12.0, 5940.0]
+2025-02-18 22:43:04,660 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:08,542 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002003, prompt_len: 107, completion_len: 474
+2025-02-18 22:43:15,129 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:20,646 - INFO - [TEST MODE] Voted numerical answer: 45.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0034620000000000002, prompt_len: 682, completion_len: 695
+2025-02-18 22:43:25,473 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:32,213 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005038, prompt_len: 1494, completion_len: 886
+2025-02-18 22:43:35,929 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:37,638 - INFO - [TEST MODE] Voted numerical answer: 5940.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.00279, prompt_len: 2418, completion_len: 93
+2025-02-18 22:43:37,638 - INFO - Accuracy: 0.875, Cost: 0.013
+2025-02-18 22:43:37,638 - INFO - Processing sample 9
+2025-02-18 22:43:37,638 - INFO - Ground Truth Subtasks: [8.0, 19.0, 2000.0, 304000.0]
+2025-02-18 22:43:44,360 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:50,251 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002181, prompt_len: 93, completion_len: 522
+2025-02-18 22:43:53,095 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:43:57,294 - INFO - [TEST MODE] Voted numerical answer: 19.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002872, prompt_len: 764, completion_len: 527
+2025-02-18 22:44:05,249 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:44:10,465 - INFO - [TEST MODE] Voted numerical answer: 2000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003618, prompt_len: 1442, completion_len: 544
+2025-02-18 22:44:18,614 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:44:20,410 - INFO - [TEST MODE] Voted numerical answer: 304000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0022080000000000003, prompt_len: 1892, completion_len: 79
+2025-02-18 22:44:20,411 - INFO - Accuracy: 0.889, Cost: 0.011
+2025-02-18 22:44:20,411 - INFO - Processing sample 10
+2025-02-18 22:44:20,411 - INFO - Ground Truth Subtasks: [8.0, 7.0, 22.0, 1232.0]
+2025-02-18 22:44:26,789 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:44:35,146 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004426, prompt_len: 126, completion_len: 1075
+2025-02-18 22:44:38,586 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:44:47,278 - INFO - [TEST MODE] Voted numerical answer: 13.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005708, prompt_len: 1284, completion_len: 1106
+2025-02-18 22:44:52,857 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:44:57,282 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004697, prompt_len: 2649, completion_len: 512
+2025-02-18 22:45:00,351 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:45:02,470 - INFO - [TEST MODE] Voted numerical answer: 2288.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003658, prompt_len: 3198, completion_len: 115
+2025-02-18 22:45:02,470 - INFO - Accuracy: 0.800, Cost: 0.018
+2025-02-18 22:45:02,471 - INFO - Processing sample 11
+2025-02-18 22:45:02,471 - INFO - Ground Truth Subtasks: [8.0, 81.0, 22.0, 14256.0]
+2025-02-18 22:45:08,402 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:45:12,447 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002234, prompt_len: 126, completion_len: 527
+2025-02-18 22:45:18,263 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:45:23,288 - INFO - [TEST MODE] Voted numerical answer: 81.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0034970000000000005, prompt_len: 717, completion_len: 695
+2025-02-18 22:45:26,925 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:45:37,409 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.007864, prompt_len: 1532, completion_len: 1583
+2025-02-18 22:45:49,877 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:45:51,470 - INFO - [TEST MODE] Voted numerical answer: 14256.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0031599999999999996, prompt_len: 2852, completion_len: 77
+2025-02-18 22:45:51,471 - INFO - Accuracy: 0.818, Cost: 0.017
+2025-02-18 22:45:51,471 - INFO - Processing sample 12
+2025-02-18 22:45:51,471 - INFO - Ground Truth Subtasks: [8.0, 7.0, 8.0, 448.0]
+2025-02-18 22:45:56,412 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:01,040 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0024040000000000003, prompt_len: 108, completion_len: 574
+2025-02-18 22:46:06,428 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:09,576 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002056, prompt_len: 792, completion_len: 316
+2025-02-18 22:46:13,917 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:17,521 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002371, prompt_len: 1179, completion_len: 298
+2025-02-18 22:46:20,064 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:21,993 - INFO - [TEST MODE] Voted numerical answer: 448.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0019290000000000004, prompt_len: 1521, completion_len: 102
+2025-02-18 22:46:21,993 - INFO - Accuracy: 0.833, Cost: 0.009
+2025-02-18 22:46:21,993 - INFO - Processing sample 13
+2025-02-18 22:46:21,994 - INFO - Ground Truth Subtasks: [12.0, 111.0, 4.0, 5328.0]
+2025-02-18 22:46:41,741 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:47,994 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0032310000000000004, prompt_len: 111, completion_len: 780
+2025-02-18 22:46:51,089 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:46:55,985 - INFO - [TEST MODE] Voted numerical answer: 111.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002886, prompt_len: 1066, completion_len: 455
+2025-02-18 22:46:58,973 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:47:03,069 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003566, prompt_len: 1658, completion_len: 477
+2025-02-18 22:48:14,610 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:48:16,347 - INFO - [TEST MODE] Voted numerical answer: 5328.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002592, prompt_len: 2172, completion_len: 105
+2025-02-18 22:48:16,347 - INFO - Accuracy: 0.846, Cost: 0.012
+2025-02-18 22:48:16,347 - INFO - Processing sample 14
+2025-02-18 22:48:16,347 - INFO - Ground Truth Subtasks: [7.0, 210.0, 1076.0, 1581720.0]
+2025-02-18 22:48:30,925 - INFO - Selected candidate agent ['qwen2.5-max_AlgebraExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:48:57,539 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_AlgebraExpert. Cost: 0.0028535999999999995, prompt_len: 379, completion_len: 810
+2025-02-18 22:49:01,834 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:49:08,147 - INFO - [TEST MODE] Voted numerical answer: 210.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0047220000000000005, prompt_len: 1102, completion_len: 905
+2025-02-18 22:49:11,994 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:49:17,788 - INFO - [TEST MODE] Voted numerical answer: 1076.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004239000000000001, prompt_len: 2135, completion_len: 526
+2025-02-18 22:49:25,029 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:49:27,010 - INFO - [TEST MODE] Voted numerical answer: 1581720.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003222, prompt_len: 2698, completion_len: 131
+2025-02-18 22:49:27,010 - INFO - Accuracy: 0.857, Cost: 0.015
+2025-02-18 22:49:27,011 - INFO - Processing sample 15
+2025-02-18 22:49:27,011 - INFO - Ground Truth Subtasks: [-9.0, -128.0, 72.0, 82944.0]
+2025-02-18 22:49:31,932 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:49:40,281 - INFO - [TEST MODE] Voted numerical answer: 6.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004939, prompt_len: 119, completion_len: 1205
+2025-02-18 22:49:44,383 - INFO - Selected candidate agent ['qwen2.5-max_AlgebraExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:50:27,928 - INFO - [TEST MODE] Voted numerical answer: -5553655200.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_AlgebraExpert. Cost: 0.006372, prompt_len: 1482, completion_len: 1173
+2025-02-18 22:50:40,227 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:50:46,162 - INFO - [TEST MODE] Voted numerical answer: -6058314528.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0049429999999999995, prompt_len: 2631, completion_len: 578
+2025-02-18 22:50:51,239 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:50:54,929 - INFO - [TEST MODE] Voted numerical answer: 20187245242535116800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0039, prompt_len: 3012, completion_len: 222
+2025-02-18 22:50:54,929 - INFO - Accuracy: 0.800, Cost: 0.020
+2025-02-18 22:50:54,929 - INFO - Processing sample 16
+2025-02-18 22:50:54,929 - INFO - Ground Truth Subtasks: [81.0, 2.0, 12.0, 1944.0]
+2025-02-18 22:50:57,964 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:51:01,361 - INFO - [TEST MODE] Voted numerical answer: 81.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001477, prompt_len: 109, completion_len: 342
+2025-02-18 22:51:06,264 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:51:09,965 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0021230000000000003, prompt_len: 599, completion_len: 381
+2025-02-18 22:51:12,842 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:51:15,913 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00216, prompt_len: 1040, completion_len: 280
+2025-02-18 22:51:30,266 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:51:43,622 - INFO - [TEST MODE] Voted numerical answer: 1944.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001817, prompt_len: 1357, completion_len: 115
+2025-02-18 22:51:43,622 - INFO - Accuracy: 0.812, Cost: 0.008
+2025-02-18 22:51:43,622 - INFO - Processing sample 17
+2025-02-18 22:51:43,622 - INFO - Ground Truth Subtasks: [90.0, 54.0, 26.0, 126360.0]
+2025-02-18 22:51:47,460 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:51:51,567 - INFO - [TEST MODE] Voted numerical answer: 90.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00181, prompt_len: 102, completion_len: 427
+2025-02-18 22:51:55,234 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:52:00,344 - INFO - [TEST MODE] Voted numerical answer: 54.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002678, prompt_len: 666, completion_len: 503
+2025-02-18 22:52:05,512 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:52:10,553 - INFO - [TEST MODE] Voted numerical answer: 26.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003332, prompt_len: 1284, completion_len: 512
+2025-02-18 22:52:19,001 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:52:21,996 - INFO - [TEST MODE] Voted numerical answer: 126360.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002078, prompt_len: 1758, completion_len: 80
+2025-02-18 22:52:21,996 - INFO - Accuracy: 0.824, Cost: 0.010
+2025-02-18 22:52:21,997 - INFO - Processing sample 18
+2025-02-18 22:52:21,997 - INFO - Ground Truth Subtasks: [10.0, 7.0, 10.0, 700.0]
+2025-02-18 22:54:07,960 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:54:11,401 - INFO - [TEST MODE] Voted numerical answer: 10.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001878, prompt_len: 166, completion_len: 428
+2025-02-18 22:54:16,676 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:54:21,060 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002719, prompt_len: 711, completion_len: 502
+2025-02-18 22:54:23,933 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:54:26,350 - INFO - [TEST MODE] Voted numerical answer: 10.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002179, prompt_len: 1307, completion_len: 218
+2025-02-18 22:54:39,908 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:54:41,733 - INFO - [TEST MODE] Voted numerical answer: 700.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0019100000000000002, prompt_len: 1562, completion_len: 87
+2025-02-18 22:54:41,734 - INFO - Accuracy: 0.833, Cost: 0.009
+2025-02-18 22:54:41,734 - INFO - Processing sample 19
+2025-02-18 22:54:41,734 - INFO - Ground Truth Subtasks: [8.0, 8.0, 180.0, 11520.0]
+2025-02-18 22:54:48,666 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:54:51,666 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001665, prompt_len: 97, completion_len: 392
+2025-02-18 22:54:56,611 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:55:01,100 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003056, prompt_len: 604, completion_len: 613
+2025-02-18 22:55:05,492 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:55:08,620 - INFO - [TEST MODE] Voted numerical answer: 180.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025380000000000003, prompt_len: 1334, completion_len: 301
+2025-02-18 22:55:19,985 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:55:21,544 - INFO - [TEST MODE] Voted numerical answer: 11520.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0019500000000000001, prompt_len: 1650, completion_len: 75
+2025-02-18 22:55:21,544 - INFO - Accuracy: 0.842, Cost: 0.009
+2025-02-18 22:55:21,544 - INFO - Processing sample 20
+2025-02-18 22:55:21,544 - INFO - Ground Truth Subtasks: [4.0, 3.0, 5.0, 60.0]
+2025-02-18 22:55:24,915 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:56:51,734 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.0054719999999999994, prompt_len: 323, completion_len: 1957
+2025-02-18 22:56:58,807 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:57:02,239 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003792, prompt_len: 2108, completion_len: 421
+2025-02-18 22:57:06,247 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:57:09,594 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0038920000000000005, prompt_len: 2612, completion_len: 320
+2025-02-18 22:57:16,229 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:57:18,722 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00348, prompt_len: 3056, completion_len: 106
+2025-02-18 22:57:18,722 - INFO - Accuracy: 0.850, Cost: 0.017
+2025-02-18 22:57:18,722 - INFO - Processing sample 21
+2025-02-18 22:57:18,722 - INFO - Ground Truth Subtasks: [30.0, 6.0, 4.0, 720.0]
+2025-02-18 22:57:29,958 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:57:34,682 - INFO - [TEST MODE] Voted numerical answer: 30.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0023360000000000004, prompt_len: 120, completion_len: 554
+2025-02-18 22:59:19,098 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:59:26,006 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00429, prompt_len: 782, completion_len: 877
+2025-02-18 22:59:31,624 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:59:42,881 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00803, prompt_len: 1822, completion_len: 1552
+2025-02-18 22:59:45,890 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:59:47,519 - INFO - [TEST MODE] Voted numerical answer: 1800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004109, prompt_len: 3657, completion_len: 113
+2025-02-18 22:59:47,519 - INFO - Accuracy: 0.810, Cost: 0.019
+2025-02-18 22:59:47,519 - INFO - Processing sample 22
+2025-02-18 22:59:47,519 - INFO - Ground Truth Subtasks: [180.0, 40.0, 108.0, 777600.0]
+2025-02-18 22:59:50,799 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 22:59:56,456 - INFO - [TEST MODE] Voted numerical answer: 180.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002833, prompt_len: 129, completion_len: 676
+2025-02-18 23:00:07,772 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:00:12,765 - INFO - [TEST MODE] Voted numerical answer: 50.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002948, prompt_len: 976, completion_len: 493
+2025-02-18 23:00:16,243 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:00:20,569 - INFO - [TEST MODE] Voted numerical answer: 118.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003714, prompt_len: 1742, completion_len: 493
+2025-02-18 23:00:29,139 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:00:45,711 - INFO - [TEST MODE] Voted numerical answer: 1062000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002777, prompt_len: 2273, completion_len: 126
+2025-02-18 23:00:45,712 - INFO - Accuracy: 0.773, Cost: 0.012
+2025-02-18 23:00:45,712 - INFO - Processing sample 23
+2025-02-18 23:00:45,712 - INFO - Ground Truth Subtasks: [78.0, -108.0, 54.0, -454896.0]
+2025-02-18 23:00:54,075 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:01:09,692 - INFO - [TEST MODE] Voted numerical answer: 83.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.000978, prompt_len: 86, completion_len: 223
+2025-02-18 23:01:14,031 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:01:23,062 - INFO - [TEST MODE] Voted numerical answer: -61.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0051459999999999995, prompt_len: 378, completion_len: 1192
+2025-02-18 23:01:35,065 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:01:47,342 - INFO - [TEST MODE] Voted numerical answer: 472.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003272, prompt_len: 1656, completion_len: 404
+2025-02-18 23:01:52,132 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:01:54,070 - INFO - [TEST MODE] Voted numerical answer: -2411876.25 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0024, prompt_len: 1992, completion_len: 102
+2025-02-18 23:01:54,070 - INFO - Accuracy: 0.739, Cost: 0.012
+2025-02-18 23:01:54,070 - INFO - Processing sample 24
+2025-02-18 23:01:54,070 - INFO - Ground Truth Subtasks: [1016.0, 81.0, 3.5, 288036.0]
+2025-02-18 23:01:57,306 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:00,329 - INFO - [TEST MODE] Voted numerical answer: 1016.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0017150000000000002, prompt_len: 107, completion_len: 402
+2025-02-18 23:02:08,431 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_MechanicsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:11,010 - INFO - [TEST MODE] Voted numerical answer: 81.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_MechanicsExpert. Cost: 0.001557, prompt_len: 589, completion_len: 242
+2025-02-18 23:02:14,374 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:17,841 - INFO - [TEST MODE] Voted numerical answer: 3.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002512, prompt_len: 900, completion_len: 403
+2025-02-18 23:02:20,219 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:22,157 - INFO - [TEST MODE] Voted numerical answer: 287936.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001779, prompt_len: 1351, completion_len: 107
+2025-02-18 23:02:22,157 - INFO - Accuracy: 0.750, Cost: 0.008
+2025-02-18 23:02:22,157 - INFO - Processing sample 25
+2025-02-18 23:02:22,157 - INFO - Ground Truth Subtasks: [5.0, 6.0, -99.0, -2970.0]
+2025-02-18 23:02:38,550 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:49,982 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003383, prompt_len: 127, completion_len: 814
+2025-02-18 23:02:52,801 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:02:56,862 - INFO - [TEST MODE] Voted numerical answer: 6.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0029140000000000004, prompt_len: 1018, completion_len: 474
+2025-02-18 23:03:07,015 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:03:14,267 - INFO - [TEST MODE] Voted numerical answer: -99.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005822, prompt_len: 1566, completion_len: 1064
+2025-02-18 23:03:17,160 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:03:18,967 - INFO - [TEST MODE] Voted numerical answer: -2970.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0029259999999999998, prompt_len: 2562, completion_len: 91
+2025-02-18 23:03:18,968 - INFO - Accuracy: 0.760, Cost: 0.015
+2025-02-18 23:03:18,968 - INFO - Processing sample 26
+2025-02-18 23:03:18,968 - INFO - Ground Truth Subtasks: [36.0, 129.0, 1950.0, 9055800.0]
+2025-02-18 23:03:22,131 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:03:24,249 - INFO - [TEST MODE] Voted numerical answer: 36.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.000998, prompt_len: 130, completion_len: 217
+2025-02-18 23:03:28,251 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:03:48,301 - INFO - [TEST MODE] Voted numerical answer: 69.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002898, prompt_len: 426, completion_len: 618
+2025-02-18 23:03:53,258 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:03:58,783 - INFO - [TEST MODE] Voted numerical answer: 1950.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0027960000000000003, prompt_len: 1120, completion_len: 419
+2025-02-18 23:04:02,623 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:05,117 - INFO - [TEST MODE] Voted numerical answer: 4843800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002088, prompt_len: 1576, completion_len: 128
+2025-02-18 23:04:05,117 - INFO - Accuracy: 0.731, Cost: 0.009
+2025-02-18 23:04:05,117 - INFO - Processing sample 27
+2025-02-18 23:04:05,118 - INFO - Ground Truth Subtasks: [12.0, 3.0, 21.0, 756.0]
+2025-02-18 23:04:09,195 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:14,531 - INFO - [TEST MODE] Voted numerical answer: 38.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0026739999999999997, prompt_len: 94, completion_len: 645
+2025-02-18 23:04:19,186 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:28,177 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.005587, prompt_len: 803, completion_len: 1196
+2025-02-18 23:04:34,371 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:38,153 - INFO - [TEST MODE] Voted numerical answer: 21.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0038200000000000005, prompt_len: 2096, completion_len: 431
+2025-02-18 23:04:42,035 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:43,640 - INFO - [TEST MODE] Voted numerical answer: 2394.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002903, prompt_len: 2575, completion_len: 82
+2025-02-18 23:04:43,640 - INFO - Accuracy: 0.704, Cost: 0.015
+2025-02-18 23:04:43,640 - INFO - Processing sample 28
+2025-02-18 23:04:43,641 - INFO - Ground Truth Subtasks: [163.0, 50.0, 22.0, 179300.0]
+2025-02-18 23:04:46,914 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:04:52,237 - INFO - [TEST MODE] Voted numerical answer: 163.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003137, prompt_len: 261, completion_len: 719
+2025-02-18 23:05:07,353 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:05:10,019 - INFO - [TEST MODE] Voted numerical answer: 50.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002076, prompt_len: 1056, completion_len: 255
+2025-02-18 23:05:16,237 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:05:23,148 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005199, prompt_len: 1435, completion_len: 941
+2025-02-18 23:05:27,915 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:05:46,240 - INFO - [TEST MODE] Voted numerical answer: 179300.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0030529999999999997, prompt_len: 2617, completion_len: 109
+2025-02-18 23:05:46,240 - INFO - Accuracy: 0.714, Cost: 0.013
+2025-02-18 23:05:46,240 - INFO - Processing sample 29
+2025-02-18 23:05:46,241 - INFO - Ground Truth Subtasks: [8.0, 1209.0, 19.0, 183768.0]
+2025-02-18 23:05:51,804 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:05:56,630 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.00265, prompt_len: 126, completion_len: 631
+2025-02-18 23:06:01,948 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:06:11,586 - INFO - [TEST MODE] Voted numerical answer: 1209.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.006542, prompt_len: 874, completion_len: 1417
+2025-02-18 23:06:17,348 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:06:27,913 - INFO - [TEST MODE] Voted numerical answer: 55.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.008185000000000001, prompt_len: 2477, completion_len: 1427
+2025-02-18 23:06:30,812 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:06:33,156 - INFO - [TEST MODE] Voted numerical answer: 531960.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00443, prompt_len: 3942, completion_len: 122
+2025-02-18 23:06:33,156 - INFO - Accuracy: 0.690, Cost: 0.022
+2025-02-18 23:06:33,156 - INFO - Processing sample 30
+2025-02-18 23:06:33,156 - INFO - Ground Truth Subtasks: [12.0, 8.0, 36.0, 3456.0]
+2025-02-18 23:06:36,671 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_MechanicsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:06:40,059 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_MechanicsExpert. Cost: 0.001571, prompt_len: 127, completion_len: 361
+2025-02-18 23:06:46,181 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:06:53,082 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0042060000000000005, prompt_len: 626, completion_len: 895
+2025-02-18 23:06:59,646 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:07:03,918 - INFO - [TEST MODE] Voted numerical answer: 36.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003099, prompt_len: 1599, completion_len: 375
+2025-02-18 23:07:06,751 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:07:09,165 - INFO - [TEST MODE] Voted numerical answer: 3456.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002491, prompt_len: 2011, completion_len: 120
+2025-02-18 23:07:09,166 - INFO - Accuracy: 0.700, Cost: 0.011
+2025-02-18 23:07:09,166 - INFO - Processing sample 31
+2025-02-18 23:07:09,166 - INFO - Ground Truth Subtasks: [3.0, 22.0, 957.0, 63162.0]
+2025-02-18 23:07:13,808 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:07:16,768 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001345, prompt_len: 109, completion_len: 309
+2025-02-18 23:07:25,030 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:07:31,176 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003088, prompt_len: 508, completion_len: 645
+2025-02-18 23:07:38,819 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:07:43,365 - INFO - [TEST MODE] Voted numerical answer: 957.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0032519999999999997, prompt_len: 1260, completion_len: 498
+2025-02-18 23:08:24,886 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:08:27,443 - INFO - [TEST MODE] Voted numerical answer: 63162.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0023120000000000003, prompt_len: 1860, completion_len: 113
+2025-02-18 23:08:27,443 - INFO - Accuracy: 0.710, Cost: 0.010
+2025-02-18 23:08:27,443 - INFO - Processing sample 32
+2025-02-18 23:08:27,443 - INFO - Ground Truth Subtasks: [5.0, 12.0, 1680.0, 100800.0]
+2025-02-18 23:08:30,707 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:08:34,942 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001943, prompt_len: 111, completion_len: 458
+2025-02-18 23:08:37,964 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:08:41,390 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001999, prompt_len: 631, completion_len: 342
+2025-02-18 23:08:52,301 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:08:58,453 - INFO - [TEST MODE] Voted numerical answer: 1680.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0037040000000000003, prompt_len: 1052, completion_len: 663
+2025-02-18 23:09:05,204 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:09:07,457 - INFO - [TEST MODE] Voted numerical answer: 100800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002311, prompt_len: 1811, completion_len: 125
+2025-02-18 23:09:07,458 - INFO - Accuracy: 0.719, Cost: 0.010
+2025-02-18 23:09:07,458 - INFO - Processing sample 33
+2025-02-18 23:09:07,458 - INFO - Ground Truth Subtasks: [0.43, 350.0, 9.0, 1354.5]
+2025-02-18 23:09:13,568 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:09:17,219 - INFO - [TEST MODE] Voted numerical answer: 0.43 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001984, prompt_len: 164, completion_len: 455
+2025-02-18 23:09:20,383 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:09:24,806 - INFO - [TEST MODE] Voted numerical answer: 350.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002536, prompt_len: 716, completion_len: 455
+2025-02-18 23:09:31,189 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:09:36,659 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004176, prompt_len: 1236, completion_len: 735
+2025-02-18 23:09:41,104 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:12:43,866 - INFO - [TEST MODE] Voted numerical answer: 1354.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0023610000000000003, prompt_len: 1889, completion_len: 118
+2025-02-18 23:12:43,867 - INFO - Accuracy: 0.727, Cost: 0.011
+2025-02-18 23:12:43,867 - INFO - Processing sample 34
+2025-02-18 23:12:43,867 - INFO - Ground Truth Subtasks: [1.0, 34.0, -6.5, -221.0]
+2025-02-18 23:12:47,843 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:12:52,725 - INFO - [TEST MODE] Voted numerical answer: 1.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0030490000000000005, prompt_len: 253, completion_len: 699
+2025-02-18 23:12:55,781 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:13:22,026 - INFO - [TEST MODE] Voted numerical answer: 34.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004407, prompt_len: 1051, completion_len: 839
+2025-02-18 23:13:28,853 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:14:04,929 - INFO - [TEST MODE] Voted numerical answer: -6.50 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.008683199999999999, prompt_len: 2495, completion_len: 1123
+2025-02-18 23:14:10,232 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:21:31,688 - INFO - [TEST MODE] Voted numerical answer: -221.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0032389999999999997, prompt_len: 2883, completion_len: 89
+2025-02-18 23:21:31,689 - INFO - Accuracy: 0.735, Cost: 0.019
+2025-02-18 23:21:31,689 - INFO - Processing sample 35
+2025-02-18 23:21:31,689 - INFO - Ground Truth Subtasks: [22.0, 268.0, 2.0, 11792.0]
+2025-02-18 23:21:46,467 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:21:52,454 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003184, prompt_len: 84, completion_len: 775
+2025-02-18 23:21:56,846 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:22:01,647 - INFO - [TEST MODE] Voted numerical answer: 268.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.00303, prompt_len: 906, completion_len: 531
+2025-02-18 23:22:13,163 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:22:17,142 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003363, prompt_len: 1571, completion_len: 448
+2025-02-18 23:22:20,797 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:00,391 - INFO - [TEST MODE] Voted numerical answer: 11792.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0027, prompt_len: 2272, completion_len: 107
+2025-02-18 23:24:00,391 - INFO - Accuracy: 0.743, Cost: 0.012
+2025-02-18 23:24:00,392 - INFO - Processing sample 36
+2025-02-18 23:24:00,392 - INFO - Ground Truth Subtasks: [81.0, 7.0, 3.0, 1701.0]
+2025-02-18 23:24:05,649 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:12,198 - INFO - [TEST MODE] Voted numerical answer: 81.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0039180000000000005, prompt_len: 86, completion_len: 958
+2025-02-18 23:24:17,776 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:23,405 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004200000000000001, prompt_len: 1164, completion_len: 759
+2025-02-18 23:24:27,878 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:32,336 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00421, prompt_len: 2058, completion_len: 538
+2025-02-18 23:24:35,894 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:37,909 - INFO - [TEST MODE] Voted numerical answer: 1701.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0030139999999999998, prompt_len: 2634, completion_len: 95
+2025-02-18 23:24:37,909 - INFO - Accuracy: 0.750, Cost: 0.015
+2025-02-18 23:24:37,909 - INFO - Processing sample 37
+2025-02-18 23:24:37,909 - INFO - Ground Truth Subtasks: [32.0, 11.0, 5.0, 1760.0]
+2025-02-18 23:24:42,293 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:24:47,508 - INFO - [TEST MODE] Voted numerical answer: 32.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0027150000000000004, prompt_len: 119, completion_len: 649
+2025-02-18 23:24:50,529 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:29:29,147 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00571, prompt_len: 894, completion_len: 1204
+2025-02-18 23:29:34,778 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:29:41,773 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005843, prompt_len: 1903, completion_len: 985
+2025-02-18 23:29:45,136 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:29:46,658 - INFO - [TEST MODE] Voted numerical answer: 1760.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003244, prompt_len: 2936, completion_len: 77
+2025-02-18 23:29:46,658 - INFO - Accuracy: 0.757, Cost: 0.018
+2025-02-18 23:29:46,658 - INFO - Processing sample 38
+2025-02-18 23:29:46,658 - INFO - Ground Truth Subtasks: [11.0, 30.0, 8.5, 2805.0]
+2025-02-18 23:29:57,074 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:30:04,937 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004318, prompt_len: 146, completion_len: 1043
+2025-02-18 23:30:40,583 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:33:53,294 - INFO - [TEST MODE] Voted numerical answer: 30.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004252, prompt_len: 1428, completion_len: 706
+2025-02-18 23:33:58,073 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:02,018 - INFO - [TEST MODE] Voted numerical answer: 8.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004104, prompt_len: 2092, completion_len: 503
+2025-02-18 23:34:05,004 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:06,464 - INFO - [TEST MODE] Voted numerical answer: 2805.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002975, prompt_len: 2643, completion_len: 83
+2025-02-18 23:34:06,464 - INFO - Accuracy: 0.763, Cost: 0.016
+2025-02-18 23:34:06,465 - INFO - Processing sample 39
+2025-02-18 23:34:06,465 - INFO - Ground Truth Subtasks: [36.0, 70.0, 5.5, 13860.0]
+2025-02-18 23:34:09,280 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:11,874 - INFO - [TEST MODE] Voted numerical answer: 36.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001121, prompt_len: 97, completion_len: 256
+2025-02-18 23:34:16,114 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:20,149 - INFO - [TEST MODE] Voted numerical answer: 70.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00196, prompt_len: 452, completion_len: 377
+2025-02-18 23:34:25,145 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:27,471 - INFO - [TEST MODE] Voted numerical answer: 5.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001894, prompt_len: 942, completion_len: 238
+2025-02-18 23:34:31,017 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:34:32,939 - INFO - [TEST MODE] Voted numerical answer: 13860.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001681, prompt_len: 1217, completion_len: 116
+2025-02-18 23:34:32,939 - INFO - Accuracy: 0.769, Cost: 0.007
+2025-02-18 23:34:32,940 - INFO - Processing sample 40
+2025-02-18 23:34:32,940 - INFO - Ground Truth Subtasks: [8.0, 4.0, 512.0, 16384.0]
+2025-02-18 23:34:37,088 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:37:36,882 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001868, prompt_len: 96, completion_len: 443
+2025-02-18 23:37:40,652 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:37:49,462 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005138, prompt_len: 638, completion_len: 1125
+2025-02-18 23:37:57,503 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:00,512 - INFO - [TEST MODE] Voted numerical answer: 512.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003158, prompt_len: 1858, completion_len: 325
+2025-02-18 23:38:03,158 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:05,244 - INFO - [TEST MODE] Voted numerical answer: 16384.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025389999999999996, prompt_len: 2231, completion_len: 77
+2025-02-18 23:38:05,244 - INFO - Accuracy: 0.775, Cost: 0.013
+2025-02-18 23:38:05,244 - INFO - Processing sample 41
+2025-02-18 23:38:05,245 - INFO - Ground Truth Subtasks: [8.0, 0.43, 2.0, 6.88]
+2025-02-18 23:38:15,415 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:20,539 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0032, prompt_len: 96, completion_len: 776
+2025-02-18 23:38:28,189 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:32,374 - INFO - [TEST MODE] Voted numerical answer: 0.43 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0033599999999999997, prompt_len: 1004, completion_len: 589
+2025-02-18 23:38:42,012 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:46,140 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003940000000000001, prompt_len: 1728, completion_len: 553
+2025-02-18 23:38:48,629 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:50,195 - INFO - [TEST MODE] Voted numerical answer: 6.88 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002699, prompt_len: 2319, completion_len: 95
+2025-02-18 23:38:50,196 - INFO - Accuracy: 0.780, Cost: 0.013
+2025-02-18 23:38:50,196 - INFO - Processing sample 42
+2025-02-18 23:38:50,196 - INFO - Ground Truth Subtasks: [12.0, 144.0, 12.0, 20736.0]
+2025-02-18 23:38:53,758 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:38:57,956 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0019479999999999999, prompt_len: 148, completion_len: 450
+2025-02-18 23:39:01,448 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:06,097 - INFO - [TEST MODE] Voted numerical answer: 144.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0036010000000000005, prompt_len: 813, completion_len: 697
+2025-02-18 23:39:11,246 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:17,199 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004634999999999999, prompt_len: 1591, completion_len: 761
+2025-02-18 23:39:19,725 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:21,598 - INFO - [TEST MODE] Voted numerical answer: 20736.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002977, prompt_len: 2517, completion_len: 115
+2025-02-18 23:39:21,598 - INFO - Accuracy: 0.786, Cost: 0.013
+2025-02-18 23:39:21,599 - INFO - Processing sample 43
+2025-02-18 23:39:21,599 - INFO - Ground Truth Subtasks: [350.0, 50.0, 9.0, 157500.0]
+2025-02-18 23:39:25,507 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:29,718 - INFO - [TEST MODE] Voted numerical answer: 350.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002126, prompt_len: 122, completion_len: 501
+2025-02-18 23:39:39,884 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:45,082 - INFO - [TEST MODE] Voted numerical answer: 50.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003687, prompt_len: 619, completion_len: 767
+2025-02-18 23:39:52,800 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:39:59,204 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003386, prompt_len: 1750, completion_len: 409
+2025-02-18 23:40:02,019 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:40:03,884 - INFO - [TEST MODE] Voted numerical answer: 157500.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002721, prompt_len: 2197, completion_len: 131
+2025-02-18 23:40:03,884 - INFO - Accuracy: 0.791, Cost: 0.012
+2025-02-18 23:40:03,884 - INFO - Processing sample 44
+2025-02-18 23:40:03,884 - INFO - Ground Truth Subtasks: [3.24, 19.0, 5.0, 307.8]
+2025-02-18 23:40:10,751 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:40:13,889 - INFO - [TEST MODE] Voted numerical answer: 3.24 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0015030000000000002, prompt_len: 171, completion_len: 333
+2025-02-18 23:40:22,478 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:40:31,466 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.005809, prompt_len: 689, completion_len: 1280
+2025-02-18 23:40:36,363 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:40:40,877 - INFO - [TEST MODE] Voted numerical answer: 55.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004404999999999999, prompt_len: 2073, completion_len: 583
+2025-02-18 23:40:51,803 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:40:55,949 - INFO - [TEST MODE] Voted numerical answer: 1603.80 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003342, prompt_len: 2694, completion_len: 162
+2025-02-18 23:40:55,949 - INFO - Accuracy: 0.773, Cost: 0.015
+2025-02-18 23:40:55,949 - INFO - Processing sample 45
+2025-02-18 23:40:55,950 - INFO - Ground Truth Subtasks: [4.0, 12.0, 21022.0, 1009056.0]
+2025-02-18 23:41:02,878 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:41:10,951 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004641, prompt_len: 117, completion_len: 1131
+2025-02-18 23:41:17,849 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:41:23,026 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004001, prompt_len: 1289, completion_len: 678
+2025-02-18 23:41:29,697 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:41:38,270 - INFO - [TEST MODE] Voted numerical answer: 21022.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.007705, prompt_len: 2125, completion_len: 1395
+2025-02-18 23:41:43,842 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:41:48,874 - INFO - Retrying request to /chat/completions in 0.429003 seconds
+2025-02-18 23:41:51,633 - INFO - [TEST MODE] Voted numerical answer: 1009056.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004050000000000001, prompt_len: 3558, completion_len: 123
+2025-02-18 23:41:51,633 - INFO - Accuracy: 0.778, Cost: 0.020
+2025-02-18 23:41:51,633 - INFO - Processing sample 46
+2025-02-18 23:41:51,634 - INFO - Ground Truth Subtasks: [60.0, 49.0, 9.0, 26460.0]
+2025-02-18 23:41:57,929 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:42:01,215 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0017160000000000003, prompt_len: 96, completion_len: 405
+2025-02-18 23:42:18,136 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:42:22,756 - INFO - [TEST MODE] Voted numerical answer: 49.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002859, prompt_len: 579, completion_len: 570
+2025-02-18 23:42:29,568 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:42:33,712 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003505, prompt_len: 1293, completion_len: 553
+2025-02-18 23:42:40,429 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:42:45,461 - INFO - Retrying request to /chat/completions in 0.457225 seconds
+2025-02-18 23:42:47,705 - INFO - [TEST MODE] Voted numerical answer: 26460.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002254, prompt_len: 1758, completion_len: 124
+2025-02-18 23:42:47,705 - INFO - Accuracy: 0.783, Cost: 0.010
+2025-02-18 23:42:47,705 - INFO - Processing sample 47
+2025-02-18 23:42:47,705 - INFO - Ground Truth Subtasks: [14.0, 11.0, 2.0, 308.0]
+2025-02-18 23:42:53,520 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:00,561 - INFO - [TEST MODE] Voted numerical answer: 14.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0047409999999999996, prompt_len: 137, completion_len: 1151
+2025-02-18 23:43:05,130 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:08,826 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003429, prompt_len: 1373, completion_len: 514
+2025-02-18 23:43:19,243 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:21,937 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003069, prompt_len: 1877, completion_len: 298
+2025-02-18 23:43:32,159 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:37,191 - INFO - Retrying request to /chat/completions in 0.436117 seconds
+2025-02-18 23:43:39,113 - INFO - [TEST MODE] Voted numerical answer: 308.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025349999999999995, prompt_len: 2223, completion_len: 78
+2025-02-18 23:43:39,113 - INFO - Accuracy: 0.787, Cost: 0.014
+2025-02-18 23:43:39,114 - INFO - Processing sample 48
+2025-02-18 23:43:39,114 - INFO - Ground Truth Subtasks: [144.0, 7.0, 4.0, 4032.0]
+2025-02-18 23:43:44,012 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:47,379 - INFO - [TEST MODE] Voted numerical answer: 144.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0020510000000000003, prompt_len: 243, completion_len: 452
+2025-02-18 23:43:55,086 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:43:58,067 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002238, prompt_len: 786, completion_len: 363
+2025-02-18 23:44:04,151 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:44:13,099 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.006734, prompt_len: 1278, completion_len: 1364
+2025-02-18 23:44:20,629 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:44:25,661 - INFO - Retrying request to /chat/completions in 0.429986 seconds
+2025-02-18 23:44:27,677 - INFO - [TEST MODE] Voted numerical answer: 4032.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0030670000000000003, prompt_len: 2679, completion_len: 97
+2025-02-18 23:44:27,678 - INFO - Accuracy: 0.792, Cost: 0.014
+2025-02-18 23:44:27,678 - INFO - Processing sample 49
+2025-02-18 23:44:27,678 - INFO - Ground Truth Subtasks: [75.0, 3.0, 25.0, 5625.0]
+2025-02-18 23:44:34,939 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:44:39,211 - INFO - [TEST MODE] Voted numerical answer: 75.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00243, prompt_len: 106, completion_len: 581
+2025-02-18 23:44:43,233 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:44:46,903 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002348, prompt_len: 756, completion_len: 398
+2025-02-18 23:44:50,366 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:44:53,346 - INFO - [TEST MODE] Voted numerical answer: 25.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002472, prompt_len: 1228, completion_len: 311
+2025-02-18 23:44:56,424 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:01,452 - INFO - Retrying request to /chat/completions in 0.418300 seconds
+2025-02-18 23:45:03,702 - INFO - [TEST MODE] Voted numerical answer: 5625.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002135, prompt_len: 1683, completion_len: 113
+2025-02-18 23:45:03,702 - INFO - Accuracy: 0.796, Cost: 0.009
+2025-02-18 23:45:03,702 - INFO - Processing sample 50
+2025-02-18 23:45:03,702 - INFO - Ground Truth Subtasks: [49.0, 72.0, 203.0, 716184.0]
+2025-02-18 23:45:07,845 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:09,915 - INFO - [TEST MODE] Voted numerical answer: 49.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.000983, prompt_len: 111, completion_len: 218
+2025-02-18 23:45:12,661 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:15,762 - INFO - [TEST MODE] Voted numerical answer: 72.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0015850000000000003, prompt_len: 441, completion_len: 286
+2025-02-18 23:45:21,976 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:26,519 - INFO - [TEST MODE] Voted numerical answer: 203.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003347, prompt_len: 875, completion_len: 618
+2025-02-18 23:45:29,089 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:34,119 - INFO - Retrying request to /chat/completions in 0.431740 seconds
+2025-02-18 23:45:36,500 - INFO - [TEST MODE] Voted numerical answer: 716184.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002027, prompt_len: 1531, completion_len: 124
+2025-02-18 23:45:36,500 - INFO - Accuracy: 0.800, Cost: 0.008
+2025-02-18 23:45:36,500 - INFO - Processing sample 51
+2025-02-18 23:45:36,500 - INFO - Ground Truth Subtasks: [40.0, 14.0, 60.0, 33600.0]
+2025-02-18 23:45:40,239 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:45,463 - INFO - [TEST MODE] Voted numerical answer: 40.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0023560000000000005, prompt_len: 164, completion_len: 548
+2025-02-18 23:45:53,126 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:45:59,114 - INFO - [TEST MODE] Voted numerical answer: 14.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004296, prompt_len: 928, completion_len: 842
+2025-02-18 23:46:02,547 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:06,316 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003526, prompt_len: 1662, completion_len: 466
+2025-02-18 23:46:10,256 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:15,288 - INFO - Retrying request to /chat/completions in 0.437900 seconds
+2025-02-18 23:46:17,386 - INFO - [TEST MODE] Voted numerical answer: 33600.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002805, prompt_len: 2417, completion_len: 97
+2025-02-18 23:46:17,386 - INFO - Accuracy: 0.804, Cost: 0.013
+2025-02-18 23:46:17,386 - INFO - Processing sample 52
+2025-02-18 23:46:17,386 - INFO - Ground Truth Subtasks: [0.015, 7.78, 3.0, 0.3501]
+2025-02-18 23:46:23,861 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:27,547 - INFO - [TEST MODE] Voted numerical answer: 0.01 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002101, prompt_len: 109, completion_len: 498
+2025-02-18 23:46:38,153 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:41,288 - INFO - [TEST MODE] Voted numerical answer: 7.77 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001735, prompt_len: 703, completion_len: 258
+2025-02-18 23:46:47,985 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:51,276 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0026260000000000003, prompt_len: 962, completion_len: 416
+2025-02-18 23:46:54,095 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:46:59,128 - INFO - Retrying request to /chat/completions in 0.487074 seconds
+2025-02-18 23:47:02,094 - INFO - [TEST MODE] Voted numerical answer: 0.35 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002022, prompt_len: 1426, completion_len: 149
+2025-02-18 23:47:02,095 - INFO - Accuracy: 0.808, Cost: 0.008
+2025-02-18 23:47:02,095 - INFO - Processing sample 53
+2025-02-18 23:47:02,095 - INFO - Ground Truth Subtasks: [49.0, 20.0, 1209.0, 1184820.0]
+2025-02-18 23:47:06,147 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:47:08,551 - INFO - [TEST MODE] Voted numerical answer: 49.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001269, prompt_len: 105, completion_len: 291
+2025-02-18 23:47:17,137 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:47:20,590 - INFO - [TEST MODE] Voted numerical answer: 20.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002024, prompt_len: 504, completion_len: 380
+2025-02-18 23:47:27,516 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:47:34,126 - INFO - [TEST MODE] Voted numerical answer: 1209.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005069000000000001, prompt_len: 1001, completion_len: 1017
+2025-02-18 23:47:38,638 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:47:43,670 - INFO - Retrying request to /chat/completions in 0.407211 seconds
+2025-02-18 23:47:46,385 - INFO - [TEST MODE] Voted numerical answer: 1184820.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002552, prompt_len: 2056, completion_len: 124
+2025-02-18 23:47:46,385 - INFO - Accuracy: 0.811, Cost: 0.011
+2025-02-18 23:47:46,385 - INFO - Processing sample 54
+2025-02-18 23:47:46,385 - INFO - Ground Truth Subtasks: [8.0, 400.0, 30.0, 96000.0]
+2025-02-18 23:47:49,924 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:47:53,289 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001849, prompt_len: 105, completion_len: 436
+2025-02-18 23:48:00,499 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:48:03,279 - INFO - [TEST MODE] Voted numerical answer: 400.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001738, prompt_len: 662, completion_len: 269
+2025-02-18 23:48:08,328 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:48:13,367 - INFO - [TEST MODE] Voted numerical answer: 30.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003408, prompt_len: 1024, completion_len: 596
+2025-02-18 23:48:23,597 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:48:28,628 - INFO - Retrying request to /chat/completions in 0.416537 seconds
+2025-02-18 23:48:30,790 - INFO - [TEST MODE] Voted numerical answer: 96000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002101, prompt_len: 1657, completion_len: 111
+2025-02-18 23:48:30,791 - INFO - Accuracy: 0.815, Cost: 0.009
+2025-02-18 23:48:30,791 - INFO - Processing sample 55
+2025-02-18 23:48:30,791 - INFO - Ground Truth Subtasks: [12.0, 3.0, 7.5, 270.0]
+2025-02-18 23:48:35,502 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:48:38,805 - INFO - [TEST MODE] Voted numerical answer: 84.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0014470000000000002, prompt_len: 79, completion_len: 342
+2025-02-18 23:48:43,742 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:48:47,921 - INFO - [TEST MODE] Voted numerical answer: 1.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002535, prompt_len: 539, completion_len: 499
+2025-02-18 23:48:59,802 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:02,293 - INFO - [TEST MODE] Voted numerical answer: 7.90 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0025020000000000003, prompt_len: 1134, completion_len: 342
+2025-02-18 23:49:05,165 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:10,196 - INFO - Retrying request to /chat/completions in 0.394761 seconds
+2025-02-18 23:49:12,220 - INFO - [TEST MODE] Voted numerical answer: 663.60 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0018260000000000001, prompt_len: 1462, completion_len: 91
+2025-02-18 23:49:12,220 - INFO - Accuracy: 0.800, Cost: 0.008
+2025-02-18 23:49:12,220 - INFO - Processing sample 56
+2025-02-18 23:49:12,220 - INFO - Ground Truth Subtasks: [556.0, 62.0, 20.0, 689440.0]
+2025-02-18 23:49:16,442 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:19,715 - INFO - [TEST MODE] Voted numerical answer: 23.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001616, prompt_len: 112, completion_len: 376
+2025-02-18 23:49:23,024 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:27,412 - INFO - [TEST MODE] Voted numerical answer: 64.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0030169999999999997, prompt_len: 565, completion_len: 613
+2025-02-18 23:49:30,077 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:33,562 - INFO - [TEST MODE] Voted numerical answer: 20.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003057, prompt_len: 1309, completion_len: 437
+2025-02-18 23:49:35,989 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:41,020 - INFO - Retrying request to /chat/completions in 0.433785 seconds
+2025-02-18 23:49:42,722 - INFO - [TEST MODE] Voted numerical answer: 29440.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0019320000000000001, prompt_len: 1624, completion_len: 77
+2025-02-18 23:49:42,723 - INFO - Accuracy: 0.786, Cost: 0.010
+2025-02-18 23:49:42,723 - INFO - Processing sample 57
+2025-02-18 23:49:42,723 - INFO - Ground Truth Subtasks: [233.0, 88.0, 8.0, 164032.0]
+2025-02-18 23:49:51,794 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:49:57,090 - INFO - [TEST MODE] Voted numerical answer: 233.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003101, prompt_len: 93, completion_len: 752
+2025-02-18 23:50:04,954 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:50:11,938 - INFO - [TEST MODE] Voted numerical answer: 88.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00471, prompt_len: 918, completion_len: 948
+2025-02-18 23:50:16,283 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:50:20,199 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0039000000000000003, prompt_len: 2148, completion_len: 438
+2025-02-18 23:50:27,314 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:50:32,347 - INFO - Retrying request to /chat/completions in 0.396430 seconds
+2025-02-18 23:50:34,437 - INFO - [TEST MODE] Voted numerical answer: 164032.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002883, prompt_len: 2459, completion_len: 106
+2025-02-18 23:50:34,437 - INFO - Accuracy: 0.789, Cost: 0.015
+2025-02-18 23:50:34,437 - INFO - Processing sample 58
+2025-02-18 23:50:34,437 - INFO - Ground Truth Subtasks: [2.0, 1058.0, -4.0, -8464.0]
+2025-02-18 23:50:45,317 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:50:47,703 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0012300000000000002, prompt_len: 114, completion_len: 279
+2025-02-18 23:50:55,990 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:02,028 - INFO - [TEST MODE] Voted numerical answer: 1058.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0039239999999999995, prompt_len: 488, completion_len: 859
+2025-02-18 23:51:07,022 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:10,557 - INFO - [TEST MODE] Voted numerical answer: -4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002932, prompt_len: 1444, completion_len: 372
+2025-02-18 23:51:15,767 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:20,799 - INFO - Retrying request to /chat/completions in 0.472670 seconds
+2025-02-18 23:51:22,676 - INFO - [TEST MODE] Voted numerical answer: -8464.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002052, prompt_len: 1708, completion_len: 86
+2025-02-18 23:51:22,676 - INFO - Accuracy: 0.793, Cost: 0.010
+2025-02-18 23:51:22,676 - INFO - Processing sample 59
+2025-02-18 23:51:22,676 - INFO - Ground Truth Subtasks: [108.0, 12.0, 54.0, 69984.0]
+2025-02-18 23:51:25,516 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:27,687 - INFO - [TEST MODE] Voted numerical answer: 108.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001075, prompt_len: 99, completion_len: 244
+2025-02-18 23:51:33,530 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:36,293 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0014290000000000001, prompt_len: 425, completion_len: 251
+2025-02-18 23:51:42,112 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:43,796 - INFO - [TEST MODE] Voted numerical answer: 54.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001388, prompt_len: 740, completion_len: 162
+2025-02-18 23:51:49,920 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:51:54,952 - INFO - Retrying request to /chat/completions in 0.491806 seconds
+2025-02-18 23:51:56,940 - INFO - [TEST MODE] Voted numerical answer: 69984.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0013469999999999999, prompt_len: 911, completion_len: 109
+2025-02-18 23:51:56,940 - INFO - Accuracy: 0.797, Cost: 0.005
+2025-02-18 23:51:56,940 - INFO - Processing sample 60
+2025-02-18 23:51:56,941 - INFO - Ground Truth Subtasks: [350.0, 22.0, 5.0, 38500.0]
+2025-02-18 23:52:00,673 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:04,560 - INFO - [TEST MODE] Voted numerical answer: 350.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00185, prompt_len: 122, completion_len: 432
+2025-02-18 23:52:10,068 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:16,813 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003606, prompt_len: 646, completion_len: 740
+2025-02-18 23:52:21,502 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:27,408 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005000999999999999, prompt_len: 1589, completion_len: 853
+2025-02-18 23:52:30,645 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:35,677 - INFO - Retrying request to /chat/completions in 0.384901 seconds
+2025-02-18 23:52:37,618 - INFO - [TEST MODE] Voted numerical answer: 38500.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002644, prompt_len: 2300, completion_len: 86
+2025-02-18 23:52:37,618 - INFO - Accuracy: 0.800, Cost: 0.013
+2025-02-18 23:52:37,618 - INFO - Processing sample 61
+2025-02-18 23:52:37,618 - INFO - Ground Truth Subtasks: [64.0, 7.0, 8000.0, 3584000.0]
+2025-02-18 23:52:41,653 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:49,597 - INFO - [TEST MODE] Voted numerical answer: 64.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005026, prompt_len: 162, completion_len: 1216
+2025-02-18 23:52:56,285 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:52:58,668 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0024230000000000002, prompt_len: 1455, completion_len: 242
+2025-02-18 23:53:02,471 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:06,630 - INFO - [TEST MODE] Voted numerical answer: 8000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003766, prompt_len: 1658, completion_len: 527
+2025-02-18 23:53:10,204 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:15,235 - INFO - Retrying request to /chat/completions in 0.396750 seconds
+2025-02-18 23:53:17,109 - INFO - [TEST MODE] Voted numerical answer: 3584000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002545, prompt_len: 2233, completion_len: 78
+2025-02-18 23:53:17,109 - INFO - Accuracy: 0.803, Cost: 0.014
+2025-02-18 23:53:17,109 - INFO - Processing sample 62
+2025-02-18 23:53:17,109 - INFO - Ground Truth Subtasks: [1940.0, 369.0, 5120.0, 3665203200.0]
+2025-02-18 23:53:21,996 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:25,454 - INFO - [TEST MODE] Voted numerical answer: 1940.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0018640000000000002, prompt_len: 96, completion_len: 442
+2025-02-18 23:53:31,112 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:34,212 - INFO - [TEST MODE] Voted numerical answer: 369.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0022830000000000003, prompt_len: 627, completion_len: 414
+2025-02-18 23:53:39,514 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:42,562 - INFO - [TEST MODE] Voted numerical answer: 5120.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002588, prompt_len: 1224, completion_len: 341
+2025-02-18 23:53:46,259 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:53:51,291 - INFO - Retrying request to /chat/completions in 0.488052 seconds
+2025-02-18 23:53:53,547 - INFO - [TEST MODE] Voted numerical answer: 3652644800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002009, prompt_len: 1573, completion_len: 109
+2025-02-18 23:53:53,548 - INFO - Accuracy: 0.806, Cost: 0.009
+2025-02-18 23:53:53,548 - INFO - Processing sample 63
+2025-02-18 23:53:53,548 - INFO - Ground Truth Subtasks: [180.0, 0.015, 19.0, 51.3]
+2025-02-18 23:53:59,212 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:54:02,190 - INFO - [TEST MODE] Voted numerical answer: 180.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001152, prompt_len: 144, completion_len: 252
+2025-02-18 23:54:07,644 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:54:12,366 - INFO - [TEST MODE] Voted numerical answer: 0.01 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.00339, prompt_len: 514, completion_len: 719
+2025-02-18 23:54:22,666 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:54:27,485 - INFO - [TEST MODE] Voted numerical answer: 19.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003779, prompt_len: 1283, completion_len: 624
+2025-02-18 23:54:31,931 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:54:36,962 - INFO - Retrying request to /chat/completions in 0.375787 seconds
+2025-02-18 23:54:38,979 - INFO - [TEST MODE] Voted numerical answer: 51.30 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002581, prompt_len: 2069, completion_len: 128
+2025-02-18 23:54:38,979 - INFO - Accuracy: 0.810, Cost: 0.011
+2025-02-18 23:54:38,979 - INFO - Processing sample 64
+2025-02-18 23:54:38,979 - INFO - Ground Truth Subtasks: [200.0, 5.0, 61.0, 61000.0]
+2025-02-18 23:54:43,588 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:54:47,980 - INFO - [TEST MODE] Voted numerical answer: 200.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001951, prompt_len: 79, completion_len: 468
+2025-02-18 23:54:58,913 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:55:03,378 - INFO - [TEST MODE] Voted numerical answer: 5.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003161, prompt_len: 653, completion_len: 627
+2025-02-18 23:55:10,412 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:55:18,476 - INFO - [TEST MODE] Voted numerical answer: 61.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.006261, prompt_len: 1453, completion_len: 1202
+2025-02-18 23:55:30,690 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:55:35,720 - INFO - Retrying request to /chat/completions in 0.426196 seconds
+2025-02-18 23:55:37,628 - INFO - [TEST MODE] Voted numerical answer: 61000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002742, prompt_len: 2402, completion_len: 85
+2025-02-18 23:55:37,628 - INFO - Accuracy: 0.812, Cost: 0.014
+2025-02-18 23:55:37,628 - INFO - Processing sample 65
+2025-02-18 23:55:37,628 - INFO - Ground Truth Subtasks: [8.0, 720.0, 1058.0, 6094080.0]
+2025-02-18 23:55:45,487 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:55:49,878 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002641, prompt_len: 125, completion_len: 629
+2025-02-18 23:55:55,527 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:55:59,197 - INFO - [TEST MODE] Voted numerical answer: 17280.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002372, prompt_len: 860, completion_len: 378
+2025-02-18 23:56:03,175 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:08,509 - INFO - [TEST MODE] Voted numerical answer: 1058.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003945000000000001, prompt_len: 1333, completion_len: 653
+2025-02-18 23:56:11,318 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:16,348 - INFO - Retrying request to /chat/completions in 0.389439 seconds
+2025-02-18 23:56:19,401 - INFO - [TEST MODE] Voted numerical answer: 146114560.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002684, prompt_len: 2204, completion_len: 120
+2025-02-18 23:56:19,401 - INFO - Accuracy: 0.800, Cost: 0.012
+2025-02-18 23:56:19,401 - INFO - Processing sample 66
+2025-02-18 23:56:19,401 - INFO - Ground Truth Subtasks: [8.0, 60.0, 8.0, 3840.0]
+2025-02-18 23:56:23,014 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:28,044 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003, prompt_len: 120, completion_len: 720
+2025-02-18 23:56:33,397 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:36,745 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0018700000000000001, prompt_len: 942, completion_len: 232
+2025-02-18 23:56:40,964 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:44,104 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002599, prompt_len: 1143, completion_len: 364
+2025-02-18 23:56:47,370 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:56:52,401 - INFO - Retrying request to /chat/completions in 0.461074 seconds
+2025-02-18 23:56:54,316 - INFO - [TEST MODE] Voted numerical answer: 3840.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001863, prompt_len: 1555, completion_len: 77
+2025-02-18 23:56:54,316 - INFO - Accuracy: 0.803, Cost: 0.009
+2025-02-18 23:56:54,316 - INFO - Processing sample 67
+2025-02-18 23:56:54,316 - INFO - Ground Truth Subtasks: [90.0, 96.0, 36.0, 311040.0]
+2025-02-18 23:56:59,453 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:05,270 - INFO - [TEST MODE] Voted numerical answer: 90.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003354, prompt_len: 174, completion_len: 795
+2025-02-18 23:57:10,061 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:14,801 - INFO - [TEST MODE] Voted numerical answer: 96.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003883, prompt_len: 1035, completion_len: 712
+2025-02-18 23:57:20,286 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:23,337 - INFO - [TEST MODE] Voted numerical answer: 36.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003445, prompt_len: 1849, completion_len: 399
+2025-02-18 23:57:27,934 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:32,968 - INFO - Retrying request to /chat/completions in 0.471114 seconds
+2025-02-18 23:57:34,896 - INFO - [TEST MODE] Voted numerical answer: 311040.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0026360000000000003, prompt_len: 2296, completion_len: 85
+2025-02-18 23:57:34,896 - INFO - Accuracy: 0.806, Cost: 0.013
+2025-02-18 23:57:34,896 - INFO - Processing sample 68
+2025-02-18 23:57:34,896 - INFO - Ground Truth Subtasks: [11.0, 20.0, 34.0, 7480.0]
+2025-02-18 23:57:38,111 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:39,952 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.000843, prompt_len: 103, completion_len: 185
+2025-02-18 23:57:43,263 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:45,863 - INFO - [TEST MODE] Voted numerical answer: 20.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001417, prompt_len: 361, completion_len: 264
+2025-02-18 23:57:49,281 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:57:52,593 - INFO - [TEST MODE] Voted numerical answer: 34.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002286, prompt_len: 874, completion_len: 353
+2025-02-18 23:57:56,356 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:01,388 - INFO - Retrying request to /chat/completions in 0.443824 seconds
+2025-02-18 23:58:03,687 - INFO - [TEST MODE] Voted numerical answer: 7480.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0016790000000000004, prompt_len: 1275, completion_len: 101
+2025-02-18 23:58:03,687 - INFO - Accuracy: 0.809, Cost: 0.006
+2025-02-18 23:58:03,687 - INFO - Processing sample 69
+2025-02-18 23:58:03,687 - INFO - Ground Truth Subtasks: [-128.0, 7.0, 10.0, -8960.0]
+2025-02-18 23:58:06,879 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:09,088 - INFO - [TEST MODE] Voted numerical answer: -128.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0010869999999999999, prompt_len: 95, completion_len: 248
+2025-02-18 23:58:19,635 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:22,830 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001991, prompt_len: 447, completion_len: 386
+2025-02-18 23:58:30,383 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:34,134 - INFO - [TEST MODE] Voted numerical answer: 10.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0026160000000000003, prompt_len: 896, completion_len: 430
+2025-02-18 23:58:43,786 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:48,819 - INFO - Retrying request to /chat/completions in 0.457052 seconds
+2025-02-18 23:58:50,845 - INFO - [TEST MODE] Voted numerical answer: -8960.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001759, prompt_len: 1363, completion_len: 99
+2025-02-18 23:58:50,846 - INFO - Accuracy: 0.812, Cost: 0.007
+2025-02-18 23:58:50,846 - INFO - Processing sample 70
+2025-02-18 23:58:50,846 - INFO - Ground Truth Subtasks: [448.0, 60.0, 181.0, 4865280.0]
+2025-02-18 23:58:53,975 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:58:56,979 - INFO - [TEST MODE] Voted numerical answer: 448.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.00151, prompt_len: 102, completion_len: 352
+2025-02-18 23:59:00,030 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:59:03,036 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001904, prompt_len: 516, completion_len: 347
+2025-02-18 23:59:08,189 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:59:15,826 - INFO - [TEST MODE] Voted numerical answer: 181.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005752000000000001, prompt_len: 1076, completion_len: 1169
+2025-02-18 23:59:20,071 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:59:25,101 - INFO - Retrying request to /chat/completions in 0.480062 seconds
+2025-02-18 23:59:27,709 - INFO - [TEST MODE] Voted numerical answer: 4900032.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002718, prompt_len: 2282, completion_len: 109
+2025-02-18 23:59:27,709 - INFO - Accuracy: 0.814, Cost: 0.012
+2025-02-18 23:59:27,709 - INFO - Processing sample 71
+2025-02-18 23:59:27,709 - INFO - Ground Truth Subtasks: [54.0, -6.5, 12.0, -4212.0]
+2025-02-18 23:59:31,547 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-18 23:59:34,941 - INFO - [TEST MODE] Voted numerical answer: 54.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001663, prompt_len: 107, completion_len: 389
+2025-02-18 23:59:39,630 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:00:06,301 - INFO - [TEST MODE] Voted numerical answer: -6.50 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.0045623999999999994, prompt_len: 1118, completion_len: 783
+2025-02-19 00:00:20,709 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:00:30,274 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.006988, prompt_len: 1304, completion_len: 1421
+2025-02-19 00:00:33,100 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:00:38,128 - INFO - Retrying request to /chat/completions in 0.394574 seconds
+2025-02-19 00:00:40,211 - INFO - [TEST MODE] Voted numerical answer: -4212.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003343, prompt_len: 2815, completion_len: 132
+2025-02-19 00:00:40,211 - INFO - Accuracy: 0.817, Cost: 0.017
+2025-02-19 00:00:40,211 - INFO - Processing sample 72
+2025-02-19 00:00:40,211 - INFO - Ground Truth Subtasks: [11.0, 4.0, 1440.0, 63360.0]
+2025-02-19 00:00:47,295 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:00:51,276 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002041, prompt_len: 93, completion_len: 487
+2025-02-19 00:00:56,343 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:01:01,972 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0043230000000000005, prompt_len: 731, completion_len: 898
+2025-02-19 00:01:08,451 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:01:14,656 - INFO - [TEST MODE] Voted numerical answer: 1440.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005486, prompt_len: 1726, completion_len: 940
+2025-02-19 00:01:19,999 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:01:25,029 - INFO - Retrying request to /chat/completions in 0.380931 seconds
+2025-02-19 00:01:26,912 - INFO - [TEST MODE] Voted numerical answer: 63360.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003128, prompt_len: 2704, completion_len: 106
+2025-02-19 00:01:26,912 - INFO - Accuracy: 0.819, Cost: 0.015
+2025-02-19 00:01:26,913 - INFO - Processing sample 73
+2025-02-19 00:01:26,913 - INFO - Ground Truth Subtasks: [16.0, 4.0, 7.5, 480.0]
+2025-02-19 00:01:30,062 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:01:40,988 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.007233000000000001, prompt_len: 125, completion_len: 1777
+2025-02-19 00:01:48,634 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:02:06,850 - INFO - [TEST MODE] Voted numerical answer: 0.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.012399, prompt_len: 1919, completion_len: 2620
+2025-02-19 00:02:10,156 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:02:13,506 - INFO - [TEST MODE] Voted numerical answer: 8.50 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.006391, prompt_len: 4923, completion_len: 367
+2025-02-19 00:02:16,324 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:02:21,356 - INFO - Retrying request to /chat/completions in 0.447407 seconds
+2025-02-19 00:02:23,623 - INFO - [TEST MODE] Voted numerical answer: 0.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.005755, prompt_len: 5327, completion_len: 107
+2025-02-19 00:02:23,623 - INFO - Accuracy: 0.808, Cost: 0.032
+2025-02-19 00:02:23,624 - INFO - Processing sample 74
+2025-02-19 00:02:23,624 - INFO - Ground Truth Subtasks: [4.0, 110.0, 22.0, 9680.0]
+2025-02-19 00:02:38,750 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:03:48,658 - INFO - [TEST MODE] Voted numerical answer: 19.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.00486, prompt_len: 323, completion_len: 1702
+2025-02-19 00:03:54,216 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:03:58,513 - INFO - [TEST MODE] Voted numerical answer: 110.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0037569999999999995, prompt_len: 1829, completion_len: 482
+2025-02-19 00:04:04,560 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:04:10,285 - INFO - [TEST MODE] Voted numerical answer: 22.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004886, prompt_len: 2374, completion_len: 628
+2025-02-19 00:04:14,234 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:04:19,266 - INFO - Retrying request to /chat/completions in 0.454376 seconds
+2025-02-19 00:04:22,882 - INFO - [TEST MODE] Voted numerical answer: 9680.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004158, prompt_len: 3050, completion_len: 277
+2025-02-19 00:04:22,882 - INFO - Accuracy: 0.811, Cost: 0.018
+2025-02-19 00:04:22,882 - INFO - Processing sample 75
+2025-02-19 00:04:22,882 - INFO - Ground Truth Subtasks: [-9.0, -3.0, 5120.0, 138240.0]
+2025-02-19 00:04:26,389 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:04:29,808 - INFO - [TEST MODE] Voted numerical answer: -9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002058, prompt_len: 90, completion_len: 492
+2025-02-19 00:04:33,101 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:04:36,005 - INFO - [TEST MODE] Voted numerical answer: -3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002833, prompt_len: 1433, completion_len: 350
+2025-02-19 00:04:50,263 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:04:52,559 - INFO - [TEST MODE] Voted numerical answer: 5120.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002862, prompt_len: 1962, completion_len: 225
+2025-02-19 00:04:55,517 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:00,549 - INFO - Retrying request to /chat/completions in 0.417242 seconds
+2025-02-19 00:05:02,813 - INFO - [TEST MODE] Voted numerical answer: 138240.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0026680000000000002, prompt_len: 2224, completion_len: 111
+2025-02-19 00:05:02,813 - INFO - Accuracy: 0.813, Cost: 0.010
+2025-02-19 00:05:02,813 - INFO - Processing sample 76
+2025-02-19 00:05:02,813 - INFO - Ground Truth Subtasks: [512.0, 74.0, -9.0, -340992.0]
+2025-02-19 00:05:09,190 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:12,351 - INFO - [TEST MODE] Voted numerical answer: 512.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002161, prompt_len: 109, completion_len: 513
+2025-02-19 00:05:14,897 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:18,904 - INFO - [TEST MODE] Voted numerical answer: 74.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002744, prompt_len: 728, completion_len: 504
+2025-02-19 00:05:23,606 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:27,381 - INFO - [TEST MODE] Voted numerical answer: -9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0030729999999999998, prompt_len: 1301, completion_len: 443
+2025-02-19 00:05:30,655 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:35,689 - INFO - Retrying request to /chat/completions in 0.484525 seconds
+2025-02-19 00:05:38,804 - INFO - [TEST MODE] Voted numerical answer: -340992.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002185, prompt_len: 1781, completion_len: 101
+2025-02-19 00:05:38,804 - INFO - Accuracy: 0.816, Cost: 0.010
+2025-02-19 00:05:38,804 - INFO - Processing sample 77
+2025-02-19 00:05:38,804 - INFO - Ground Truth Subtasks: [60.0, 25.0, 8.0, 12000.0]
+2025-02-19 00:05:44,186 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:48,209 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0020210000000000002, prompt_len: 117, completion_len: 476
+2025-02-19 00:05:52,647 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:05:56,434 - INFO - [TEST MODE] Voted numerical answer: 25.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0025620000000000005, prompt_len: 734, completion_len: 457
+2025-02-19 00:06:01,416 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:06:03,848 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002278, prompt_len: 1266, completion_len: 253
+2025-02-19 00:06:05,718 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:06:10,765 - INFO - Retrying request to /chat/completions in 0.417778 seconds
+2025-02-19 00:06:12,659 - INFO - [TEST MODE] Voted numerical answer: 12000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0018559999999999998, prompt_len: 1460, completion_len: 99
+2025-02-19 00:06:12,659 - INFO - Accuracy: 0.818, Cost: 0.009
+2025-02-19 00:06:12,660 - INFO - Processing sample 78
+2025-02-19 00:06:12,660 - INFO - Ground Truth Subtasks: [6.0, 45.0, 49.0, 13230.0]
+2025-02-19 00:06:21,329 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:06:26,001 - INFO - [TEST MODE] Voted numerical answer: 6.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0029609999999999997, prompt_len: 125, completion_len: 709
+2025-02-19 00:06:33,252 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:06:38,126 - INFO - [TEST MODE] Voted numerical answer: 45.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003875, prompt_len: 935, completion_len: 735
+2025-02-19 00:06:47,053 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:06:51,233 - INFO - [TEST MODE] Voted numerical answer: 49.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004039000000000001, prompt_len: 1751, completion_len: 572
+2025-02-19 00:06:57,271 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:02,302 - INFO - Retrying request to /chat/completions in 0.489792 seconds
+2025-02-19 00:07:04,779 - INFO - [TEST MODE] Voted numerical answer: 13230.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002932, prompt_len: 2360, completion_len: 143
+2025-02-19 00:07:04,779 - INFO - Accuracy: 0.821, Cost: 0.014
+2025-02-19 00:07:04,780 - INFO - Processing sample 79
+2025-02-19 00:07:04,780 - INFO - Ground Truth Subtasks: [8.0, 50.0, 25.0, 10000.0]
+2025-02-19 00:07:10,517 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:14,039 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0019600000000000004, prompt_len: 96, completion_len: 466
+2025-02-19 00:07:19,708 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:25,118 - INFO - [TEST MODE] Voted numerical answer: 50.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003837, prompt_len: 629, completion_len: 802
+2025-02-19 00:07:28,494 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:31,895 - INFO - [TEST MODE] Voted numerical answer: 25.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0033360000000000004, prompt_len: 1456, completion_len: 470
+2025-02-19 00:07:35,959 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:37,350 - INFO - [TEST MODE] Voted numerical answer: 10000.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002294, prompt_len: 1974, completion_len: 80
+2025-02-19 00:07:37,350 - INFO - Accuracy: 0.823, Cost: 0.011
+2025-02-19 00:07:37,350 - INFO - Processing sample 80
+2025-02-19 00:07:37,350 - INFO - Ground Truth Subtasks: [7.0, 8.0, 3224.0, 180544.0]
+2025-02-19 00:07:44,637 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:07:49,388 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001821, prompt_len: 145, completion_len: 419
+2025-02-19 00:07:56,933 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:08:02,932 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.004076, prompt_len: 704, completion_len: 843
+2025-02-19 00:08:20,210 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:08:24,131 - INFO - [TEST MODE] Voted numerical answer: 3224.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0033090000000000003, prompt_len: 1605, completion_len: 426
+2025-02-19 00:08:27,384 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:08:31,219 - INFO - [TEST MODE] Voted numerical answer: 180544.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0026160000000000003, prompt_len: 2068, completion_len: 137
+2025-02-19 00:08:31,219 - INFO - Accuracy: 0.825, Cost: 0.012
+2025-02-19 00:08:31,220 - INFO - Processing sample 81
+2025-02-19 00:08:31,220 - INFO - Ground Truth Subtasks: [18.0, 12.0, 11.0, 2376.0]
+2025-02-19 00:08:36,882 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:08:41,473 - INFO - [TEST MODE] Voted numerical answer: 16.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002746, prompt_len: 114, completion_len: 658
+2025-02-19 00:08:45,361 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:08:52,441 - INFO - [TEST MODE] Voted numerical answer: 28.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0050360000000000005, prompt_len: 1292, completion_len: 936
+2025-02-19 00:08:57,332 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:09:00,569 - INFO - [TEST MODE] Voted numerical answer: 11.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.003401, prompt_len: 2157, completion_len: 311
+2025-02-19 00:09:06,699 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:09:08,445 - INFO - [TEST MODE] Voted numerical answer: 4928.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002988, prompt_len: 2516, completion_len: 118
+2025-02-19 00:09:08,446 - INFO - Accuracy: 0.815, Cost: 0.014
+2025-02-19 00:09:08,446 - INFO - Processing sample 82
+2025-02-19 00:09:08,446 - INFO - Ground Truth Subtasks: [2.0, -1.0, 7.0, -14.0]
+2025-02-19 00:09:16,209 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:09:18,508 - INFO - [TEST MODE] Voted numerical answer: 2.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0011480000000000001, prompt_len: 104, completion_len: 261
+2025-02-19 00:09:24,331 - INFO - Selected candidate agent ['qwen2.5-max_ElectromagnetismExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:09:59,600 - INFO - [TEST MODE] Voted numerical answer: -1.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_ElectromagnetismExpert. Cost: 0.0040656, prompt_len: 642, completion_len: 1052
+2025-02-19 00:10:05,308 - INFO - Selected candidate agent ['qwen2.5-max_AlgebraExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:10:46,320 - INFO - [TEST MODE] Voted numerical answer: 7.00 (Number of candidates in group: 1) Final answer provided by agent qwen2.5-max_AlgebraExpert. Cost: 0.007713599999999999, prompt_len: 2073, completion_len: 1141
+2025-02-19 00:10:50,838 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:10:52,520 - INFO - [TEST MODE] Voted numerical answer: -14.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0028380000000000002, prompt_len: 2522, completion_len: 79
+2025-02-19 00:10:52,520 - INFO - Accuracy: 0.817, Cost: 0.016
+2025-02-19 00:10:52,520 - INFO - Processing sample 83
+2025-02-19 00:10:52,520 - INFO - Ground Truth Subtasks: [9.0, 216.0, 10.0, 19440.0]
+2025-02-19 00:10:59,521 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:11:01,885 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.001239, prompt_len: 91, completion_len: 287
+2025-02-19 00:11:08,172 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:11:12,577 - INFO - [TEST MODE] Voted numerical answer: 216.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0021070000000000004, prompt_len: 483, completion_len: 406
+2025-02-19 00:11:23,381 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:11:27,433 - INFO - [TEST MODE] Voted numerical answer: 10.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0033000000000000004, prompt_len: 1068, completion_len: 558
+2025-02-19 00:11:43,351 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:11:43,457 - INFO - Retrying request to /chat/completions in 0.476554 seconds
+2025-02-19 00:11:45,908 - INFO - [TEST MODE] Voted numerical answer: 19440.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0020870000000000003, prompt_len: 1663, completion_len: 106
+2025-02-19 00:11:45,908 - INFO - Accuracy: 0.819, Cost: 0.009
+2025-02-19 00:11:45,909 - INFO - Processing sample 84
+2025-02-19 00:11:45,909 - INFO - Ground Truth Subtasks: [33840.0, 28.0, 3.0, 2842560.0]
+2025-02-19 00:11:50,192 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:11:54,471 - INFO - [TEST MODE] Voted numerical answer: 33840.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002366, prompt_len: 94, completion_len: 568
+2025-02-19 00:12:00,031 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:12:02,982 - INFO - [TEST MODE] Voted numerical answer: 28.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002213, prompt_len: 769, completion_len: 361
+2025-02-19 00:12:10,869 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:12:15,593 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003945000000000001, prompt_len: 1213, completion_len: 683
+2025-02-19 00:12:21,953 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:12:23,548 - INFO - [TEST MODE] Voted numerical answer: 2842560.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002078, prompt_len: 1746, completion_len: 83
+2025-02-19 00:12:23,548 - INFO - Accuracy: 0.821, Cost: 0.011
+2025-02-19 00:12:23,548 - INFO - Processing sample 85
+2025-02-19 00:12:23,548 - INFO - Ground Truth Subtasks: [10.0, 20.0, 184.0, 36800.0]
+2025-02-19 00:12:32,862 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:12:37,101 - INFO - [TEST MODE] Voted numerical answer: 10.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002303, prompt_len: 175, completion_len: 532
+2025-02-19 00:12:40,844 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:12:44,346 - INFO - [TEST MODE] Voted numerical answer: 20.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002427, prompt_len: 779, completion_len: 412
+2025-02-19 00:12:55,670 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:04,559 - INFO - [TEST MODE] Voted numerical answer: 136.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.006471, prompt_len: 1399, completion_len: 1268
+2025-02-19 00:13:11,035 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:12,558 - INFO - [TEST MODE] Voted numerical answer: 27200.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0029950000000000003, prompt_len: 2715, completion_len: 70
+2025-02-19 00:13:12,558 - INFO - Accuracy: 0.812, Cost: 0.014
+2025-02-19 00:13:12,559 - INFO - Processing sample 86
+2025-02-19 00:13:12,559 - INFO - Ground Truth Subtasks: [12.0, 12.0, 66.0, 9504.0]
+2025-02-19 00:13:19,929 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:22,810 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.001535, prompt_len: 87, completion_len: 362
+2025-02-19 00:13:26,891 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:29,351 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0016619999999999998, prompt_len: 506, completion_len: 289
+2025-02-19 00:13:35,519 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:41,272 - INFO - [TEST MODE] Voted numerical answer: 66.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0033410000000000002, prompt_len: 897, completion_len: 611
+2025-02-19 00:13:43,543 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:45,347 - INFO - [TEST MODE] Voted numerical answer: 9504.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002149, prompt_len: 1545, completion_len: 151
+2025-02-19 00:13:45,347 - INFO - Accuracy: 0.814, Cost: 0.009
+2025-02-19 00:13:45,348 - INFO - Processing sample 87
+2025-02-19 00:13:45,348 - INFO - Ground Truth Subtasks: [957.0, 60.0, -18.0, -1033560.0]
+2025-02-19 00:13:52,339 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:13:57,626 - INFO - [TEST MODE] Voted numerical answer: 901.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0029330000000000003, prompt_len: 133, completion_len: 700
+2025-02-19 00:14:05,085 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:14:10,384 - INFO - [TEST MODE] Voted numerical answer: 60.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003967, prompt_len: 903, completion_len: 766
+2025-02-19 00:14:16,558 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:14:19,287 - INFO - [TEST MODE] Voted numerical answer: -18.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002861, prompt_len: 1629, completion_len: 308
+2025-02-19 00:14:22,429 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:14:24,889 - INFO - [TEST MODE] Voted numerical answer: -973080.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0027040000000000002, prompt_len: 2136, completion_len: 142
+2025-02-19 00:14:24,889 - INFO - Accuracy: 0.805, Cost: 0.012
+2025-02-19 00:14:24,890 - INFO - Processing sample 88
+2025-02-19 00:14:24,890 - INFO - Ground Truth Subtasks: [3.0, 8.0, 800.0, 19200.0]
+2025-02-19 00:14:29,033 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:14:33,882 - INFO - [TEST MODE] Voted numerical answer: 3.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0017980000000000001, prompt_len: 154, completion_len: 411
+2025-02-19 00:14:44,318 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:14:49,244 - INFO - [TEST MODE] Voted numerical answer: 8.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.0033230000000000004, prompt_len: 671, completion_len: 663
+2025-02-19 00:15:00,617 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:15:05,092 - INFO - [TEST MODE] Voted numerical answer: 800.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.002649, prompt_len: 1369, completion_len: 320
+2025-02-19 00:15:07,814 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:15:12,843 - INFO - Retrying request to /chat/completions in 0.412937 seconds
+2025-02-19 00:15:15,235 - INFO - [TEST MODE] Voted numerical answer: 19200.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0023020000000000002, prompt_len: 1826, completion_len: 119
+2025-02-19 00:15:15,235 - INFO - Accuracy: 0.807, Cost: 0.010
+2025-02-19 00:15:15,236 - INFO - Processing sample 89
+2025-02-19 00:15:15,236 - INFO - Ground Truth Subtasks: [12.0, 16.0, 12.0, 2304.0]
+2025-02-19 00:15:25,332 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_MechanicsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:15:28,950 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_MechanicsExpert. Cost: 0.001591, prompt_len: 127, completion_len: 366
+2025-02-19 00:15:39,718 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:15:44,488 - INFO - [TEST MODE] Voted numerical answer: 16.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003015, prompt_len: 627, completion_len: 597
+2025-02-19 00:15:48,120 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:15:51,163 - INFO - [TEST MODE] Voted numerical answer: 12.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002627, prompt_len: 1371, completion_len: 314
+2025-02-19 00:15:57,997 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:16:03,032 - INFO - Retrying request to /chat/completions in 0.463329 seconds
+2025-02-19 00:16:09,225 - INFO - [TEST MODE] Voted numerical answer: 2304.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002298, prompt_len: 1722, completion_len: 144
+2025-02-19 00:16:09,225 - INFO - Accuracy: 0.809, Cost: 0.010
+2025-02-19 00:16:09,225 - INFO - Processing sample 90
+2025-02-19 00:16:09,226 - INFO - Ground Truth Subtasks: [9.0, 4.0, 9.0, 324.0]
+2025-02-19 00:16:14,085 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:16:19,111 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.002584, prompt_len: 100, completion_len: 621
+2025-02-19 00:16:23,638 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:16:33,684 - INFO - [TEST MODE] Voted numerical answer: 4.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.0056159999999999995, prompt_len: 848, completion_len: 1192
+2025-02-19 00:16:38,718 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_GeometryExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:16:43,559 - INFO - [TEST MODE] Voted numerical answer: 9.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_GeometryExpert. Cost: 0.004465, prompt_len: 2277, completion_len: 547
+2025-02-19 00:16:45,989 - INFO - Selected candidate agent ['gemini-2.0-flash-exp_Probability&StatisticsExpert'] from 1 candidates out of 54 agents
+2025-02-19 00:16:51,022 - INFO - Retrying request to /chat/completions in 0.396278 seconds
+2025-02-19 00:16:52,887 - INFO - [TEST MODE] Voted numerical answer: 324.00 (Number of candidates in group: 1) Final answer provided by agent gemini-2.0-flash-exp_Probability&StatisticsExpert. Cost: 0.003575, prompt_len: 3199, completion_len: 94
+2025-02-19 00:16:52,887 - INFO - Accuracy: 0.811, Cost: 0.016
