@@ -147,7 +147,7 @@ class LLMAgent:
             A tuple (answer, price, prompt_tokens, completion_tokens).
         """
         # Initialize multiple API clients
-        client_chm = AsyncOpenAI(
+        client_qwen = AsyncOpenAI(
             api_key='sk-Gny5Nu8yJioYX4DAnrPNII9El7n2HmZd772g9dozbogexqmr',
             base_url='https://boyuerichdata.chatgptten.com/v1'
         )
@@ -162,7 +162,7 @@ class LLMAgent:
 
         # Choose the appropriate API client based on base_model
         if "qwen" in self.base_model:
-            client = client_chm
+            client = client_qwen
         elif "claude" in self.base_model:
             client = client_claude
         else:

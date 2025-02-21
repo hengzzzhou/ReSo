@@ -64,7 +64,6 @@ def remove_boxed(s):
         assert s[-1] == "}"
         content = s[len(left):-1]
 
-        # 使用正则表达式提取数字（包括小数）
         match = re.search(r"-?\d+\.\d+|-?\d+", content)
         if match:
             return match.group()

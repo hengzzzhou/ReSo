@@ -165,7 +165,6 @@ async def main():
         plt.xlabel("n")
         plt.ylabel("Acc")
         plt.legend()
-        
         plt.tight_layout()
         plt.savefig("training_curves.png")
         plt.show()
