@@ -54,8 +54,8 @@ class AgentGraph:
             "Provide only the generated prompt without additional explanations."
         )
         self.embedding_cache = {}
-        self.aclient = AsyncOpenAI(base_url='https://api.claudeshop.top/v1', 
-                                 api_key='sk-vTw7ftEbOSsnVWEFsXUICrnQs1PUHQh6TPqKpmRDOzNqlNiO')
+        self.aclient = AsyncOpenAI(base_url='', 
+                                 api_key='')
 
         # Uncomment and modify if you need a tokenizer or reward model
         # self.tokenizer = AutoTokenizer.from_pretrained('path_to_model')

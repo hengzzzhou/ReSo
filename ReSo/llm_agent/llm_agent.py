@@ -148,16 +148,16 @@ class LLMAgent:
         """
         # Initialize multiple API clients
         client_qwen = AsyncOpenAI(
-            api_key='sk-Gny5Nu8yJioYX4DAnrPNII9El7n2HmZd772g9dozbogexqmr',
-            base_url='https://boyuerichdata.chatgptten.com/v1'
+            api_key='',
+            base_url=''
         )
         client_oai = AsyncOpenAI(
-            api_key='sk-ug1gib8yNPuOFzcpM0gHv8QOhrA2fSfMu0Wi5dxt92vQTDQ6',
-            base_url='https://boyuerichdata.chatgptten.com/v1'
+            api_key='',
+            base_url=''
         )
         client_claude = AsyncOpenAI(
-            api_key='sk-W5M5gmYJALZh1HPiWBZjnQIUxssw5PSZC3fg5cqzuulQqvXe',
-            base_url='https://api.claudeshop.top/v1'
+            api_key='',
+            base_url=''
         )
 
         # Choose the appropriate API client based on base_model
