@@ -9,6 +9,8 @@ import json
 import sqlite3
 
 from ReSo.llm_agent.cost import cost_count
+from dotenv import load_dotenv
+import os
 
 class LLMAgent:
     """
@@ -146,18 +148,30 @@ class LLMAgent:
         Returns:
             A tuple (answer, price, prompt_tokens, completion_tokens).
         """
+
+        # Load environment variables from .env file
+        load_dotenv()
+
         # Initialize multiple API clients
         client_qwen = AsyncOpenAI(
-            api_key='',
-            base_url=''
+            api_key=os.getenv('QWEN_API_KEY'),
+            base_url=os.getenv('QWEN_BASE_URL')
         )
         client_oai = AsyncOpenAI(
-            api_key='',
-            base_url=''
+            api_key=os.getenv('OAI_API_KEY'),
+            base_url=os.getenv('OAI_BASE_URL')
         )
         client_claude = AsyncOpenAI(
-            api_key='',
-            base_url=''
+            api_key=os.getenv('CLAUDE_API_KEY'),
+            base_url=os.getenv('CLAUDE_BASE_URL')
+        )
+        client_gemini = AsyncOpenAI(
+            api_key=os.getenv('GEMINI_API_KEY'),
+            base_url=os.getenv('GEMINI_BASE_URL')
+        )
+        client_deepseek = AsyncOpenAI(
+            api_key=os.getenv('DEEPSEEK_API_KEY'),
+            base_url=os.getenv('DEEPSEEK_BASE_URL')
         )
 
         # Choose the appropriate API client based on base_model
@@ -165,6 +179,10 @@ class LLMAgent:
             client = client_qwen
         elif "claude" in self.base_model:
             client = client_claude
+        elif "gemini" in self.base_model:
+            client = client_gemini
+        elif "deepseek" in self.base_model:
+            client = client_deepseek
         else:
             client = client_oai
 

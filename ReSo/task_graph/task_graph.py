@@ -4,8 +4,10 @@ import time
 import random
 import re
 import logging
+from dotenv import load_dotenv
 from openai import OpenAI
-
+import os
+load_dotenv()
 class TaskGraph:
     """
     TaskGraph is responsible for decomposing complex tasks into subtasks
@@ -15,8 +17,11 @@ class TaskGraph:
     def __init__(self):
         # Initialize OpenAI clients for task graph generation
         self.client = OpenAI(base_url="http://0.0.0.0:8000/v1", api_key="EMPTY")
-        self.client_oai = OpenAI(base_url='https://api.claudeshop.top/v1', 
-                                 api_key='sk-vTw7ftEbOSsnVWEFsXUICrnQs1PUHQh6TPqKpmRDOzNqlNiO')
+        # Read API key and base URL from environment variables
+        oai_api_key = os.getenv('OAI_API_KEY')
+        oai_base_url = os.getenv('OAI_BASE_URL')
+
+        self.client_oai = OpenAI(base_url=oai_base_url, api_key=oai_api_key)
 
     def build_task_graph(self, question: str) -> str:
         """

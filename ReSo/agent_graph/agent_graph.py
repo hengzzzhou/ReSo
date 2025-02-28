@@ -1,6 +1,7 @@
 import asyncio
 import copy
 import math
+import os
 import random
 import json
 import time
@@ -28,14 +29,13 @@ class AgentGraph:
     and performs multi-agent inference using an MCTS-based approach.
     """
     def __init__(self, agent_pool, similarity_weight=1.0, reputation_weight=1.0, cost_weight=1.0,
-                 threshold=0.5, exploration_const=1.0, mcts_iterations=20, top_k=10, mode="train", total_visit=0):
+                 threshold=0.5, exploration_const=1.0, top_k=10, mode="train", total_visit=0):
         self.agent_pool = agent_pool
         self.similarity_weight = similarity_weight
         self.reputation_weight = reputation_weight
         self.cost_weight = cost_weight
         self.threshold = threshold
         self.exploration_const = exploration_const
-        self.mcts_iterations = mcts_iterations
         self.top_k = top_k
         self.mode = mode
         self.total_visit = total_visit
@@ -54,8 +54,9 @@ class AgentGraph:
             "Provide only the generated prompt without additional explanations."
         )
         self.embedding_cache = {}
-        self.aclient = AsyncOpenAI(base_url='', 
-                                 api_key='')
+        oai_api_key = os.getenv('OAI_API_KEY')
+        oai_base_url = os.getenv('OAI_BASE_URL')
+        self.aclient = AsyncOpenAI(base_url=oai_base_url, api_key=oai_api_key)
 
         # Uncomment and modify if you need a tokenizer or reward model
         # self.tokenizer = AutoTokenizer.from_pretrained('path_to_model')

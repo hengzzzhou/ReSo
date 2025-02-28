@@ -1,5 +1,6 @@
 import ast
 import asyncio
+import configparser
 import os
 import argparse
 import sys
@@ -61,15 +62,15 @@ async def main():
     # Compute total visits across all agents
     total_visit = sum(agent.visit for agent in agent_pool)
 
-    # Load environment variables
-    load_dotenv(override=True)
-    similarity_weight = float(os.getenv("similarity_weight", 1.0))
-    reputation_weight = float(os.getenv("reputation_weight", 1.0))
-    cost_weight = float(os.getenv("cost_weight", 1.0))
-    threshold = float(os.getenv("THRESHOLD", 0.5))
-    exploration_const = float(os.getenv("EXPLORATION_CONST", 1.0))
-    mcts_iterations = int(os.getenv("MCTS_ITERATIONS", 3))
-    top_k = int(os.getenv("TOP_K", 3))
+    config = configparser.ConfigParser()
+    config.read('config_hyper.ini')
+
+    similarity_weight = float(config['hyperparameters']['similarity_weight'])
+    reputation_weight = float(config['hyperparameters']['reputation_weight'])
+    cost_weight = float(config['hyperparameters']['cost_weight'])
+    threshold = float(config['hyperparameters']['THRESHOLD'])
+    exploration_const = float(config['hyperparameters']['EXPLORATION_CONST'])
+    top_k = int(config['hyperparameters']['TOP_K'])
 
     logging.info(f"Top-K selection: {top_k}")
 
@@ -81,7 +82,6 @@ async def main():
         cost_weight=cost_weight,
         threshold=threshold,
         exploration_const=exploration_const,
-        mcts_iterations=mcts_iterations,
         top_k=top_k,
         mode=plan_mode,
         total_visit=total_visit
