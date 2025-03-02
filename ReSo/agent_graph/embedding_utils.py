@@ -1,3 +1,4 @@
+import asyncio
 import numpy as np
 from openai import AsyncOpenAI
 
@@ -15,7 +16,16 @@ async def get_embedding_async(aclient, text, cache):
     """
     if text in cache:
         return cache[text]
-    response = await aclient.embeddings.create(input=[text], model="text-embedding-ada-002")
-    embedding = np.array(response.data[0].embedding)
-    cache[text] = embedding
-    return embedding
+
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = await aclient.embeddings.create(input=[text], model="text-embedding-ada-002")
+            embedding = np.array(response.data[0].embedding)
+            cache[text] = embedding
+            return embedding
+        except Exception as e:
+            print(f"Embedding attempt {attempt+1} failed: {e}")
+            if attempt == max_retries - 1:
+                raise
+            await asyncio.sleep(0.1)

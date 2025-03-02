@@ -16,30 +16,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from ReSo.llm_agent.llm_agent import LLMAgent
 from ReSo.task_graph.task_graph import TaskGraph
 from ReSo.agent_graph.agent_graph import AgentGraph
-from datasets.get_answer import equiv, parse_math_answer
+from datasets.get_answer import equiv, parse_math_answer,load_gsmhard_dataset,load_dataset
 
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
-
-def load_dataset(dataset_path):
-    """
-    Load dataset from the specified JSON file.
-
-    Args:
-        dataset_path (str): Path to the dataset JSON file.
-
-    Returns:
-        list: Loaded dataset as a list of dictionaries.
-    """
-    if os.path.exists(dataset_path):
-        with open(dataset_path, "r", encoding="utf-8") as f:
-            dataset = json.load(f)
-            logging.info(f"Dataset loaded successfully with {len(dataset)} samples.")
-        return dataset
-    else:
-        logging.error(f"Dataset not found at {dataset_path}.")
-        return []
 
 async def main():
     """
@@ -51,8 +32,11 @@ async def main():
     parser.add_argument('--random_select', action='store_true', default=False)
     parser.add_argument('--plan_mode', type=str, default="gt")
     parser.add_argument("--error_tolerance", type=float, default=0.01)
+    parser.add_argument("--batch_size", type=int, default=8, help="Number of samples to process in a batch")
     args = parser.parse_args()
     error_tolerance=args.error_tolerance
+    batch_size = args.batch_size
+
     # Load dataset
     dataset = load_dataset(args.dataset_path)
     random_select = args.random_select
@@ -101,63 +85,72 @@ async def main():
     total_executed = 0
     task_graph_builder = TaskGraph()
 
-    # Iterate through the dataset
-    for idx, sample in enumerate(tqdm(dataset, desc="Processing dataset", unit="sample")):
-        question = sample.get("problem_text_sort", "")
-        gt_final = sample.get("answer_number", "")
-        sorted_gt_subtask = sample.get("gt_subtask", "")
+    # Iterate through the dataset in batches with progress bar
+    for batch_start in tqdm(range(0, len(dataset), batch_size), desc="Processing Batches"):
+        batch_samples = dataset[batch_start:batch_start + batch_size]
+        batch_tasks = []
 
-        logging.info(f"Processing sample {idx + 1}")
+        for idx, sample in enumerate(batch_samples):
+            question = sample.get("problem_text_sort", "")
+            gt_final = sample.get("answer_number", "")
+            #sorted_gt_subtask = sample.get("gt_subtask", "")
 
-        # Generate task graph based on the selected planning mode
-        if plan_mode == "gt":
-            parsed_list = ast.literal_eval(sample.get("gt_plan", "[]"))
-            task_graph = parsed_list
-        elif plan_mode == "gpt":
-            task_graph = task_graph_builder.build_task_graph_oai(question)
-        else:
-            for attempt in range(3):
-                try:
-                    task_graph_str = task_graph_builder.build_task_graph(question)
-                    task_graph_dic = json.loads(task_graph_str)
-                    task_graph = [item["instruction"] for item in task_graph_dic]
-                    break
-                except Exception as e:
-                    logging.warning(f"Data parsing error (Attempt {attempt + 1}/3): {e}")
+            logging.info(f"Processing sample {batch_start + idx + 1}")
+
+            # Generate task graph based on the selected planning mode
+            if plan_mode == "gt":
+                parsed_list = ast.literal_eval(sample.get("gt_plan", "[]"))
+                task_graph = parsed_list
+            elif plan_mode == "gpt":
+                task_graph = task_graph_builder.build_task_graph_oai(question)
             else:
-                task_graph = [question]
+                for attempt in range(3):
+                    try:
+                        task_graph_str = task_graph_builder.build_task_graph(question)
+                        task_graph_dic = json.loads(task_graph_str)
+                        task_graph = [item["instruction"] for item in task_graph_dic]
+                        break
+                    except Exception as e:
+                        logging.warning(f"Data parsing error (Attempt {attempt + 1}/3): {e}")
+                else:
+                    task_graph = [question]
 
-        logging.info(f"Ground Truth Subtasks: {sorted_gt_subtask}")
+            #logging.info(f"Ground Truth Subtasks: {sorted_gt_subtask}")
 
-        # Construct the agent graph
-        agent_graph = await agent_graph_builder.build_agent_graph_test(
-            question, task_graph, random_select=random_select
-        )
+            # Construct the agent graph
+            batch_tasks.append(agent_graph_builder.build_agent_graph(
+                question, task_graph, random_select=random_select,mode="test"
+            ))
 
-        # Track cost
-        cost_list.append(agent_graph.get("cost", 0))
+        # Await all tasks in the batch
+        batch_results = await asyncio.gather(*batch_tasks)
 
-        # Extract final predicted answer
-        if agent_graph.get("nodes"):
-            predicted_final = agent_graph["nodes"][-1].get("answer", "")
-        else:
-            predicted_final = ""
+        for agent_graph, sample in zip(batch_results, batch_samples):
+            # Track cost
+            cost_list.append(agent_graph.get("cost", 0))
 
-        # Parse and compare predicted answer with ground truth
-        predict_answer = parse_math_answer(predicted_final)
-        try:
-            is_solved = equiv(predict_answer, gt_final, error_tolerance)
-        except Exception:
-            is_solved = False
+            # Extract final predicted answer
+            if agent_graph.get("nodes"):
+                predicted_final = agent_graph["nodes"][-1].get("answer", "")
+            else:
+                predicted_final = ""
 
-        total_solved += is_solved
-        total_executed += 1
-        accuracy = total_solved / total_executed
-        loss_list.append(accuracy)
+            # Parse and compare predicted answer with ground truth
+            predict_answer = parse_math_answer(predicted_final)
+            gt_final = sample.get("answer_number", "")
+            try:
+                is_solved = equiv(predict_answer, gt_final, error_tolerance)
+            except Exception:
+                is_solved = False
 
-        # Log evaluation metrics
-        logging.info(f"Accuracy: {accuracy:.3f}, Cost: {agent_graph.get('cost', 0):.3f}")
-        print(f"Accuracy: {accuracy:.3f}, Cost: {agent_graph.get('cost', 0):.3f}")
+            total_solved += is_solved
+            total_executed += 1
+            accuracy = total_solved / total_executed
+            loss_list.append(accuracy)
+
+            # Log evaluation metrics
+            logging.info(f"Accuracy: {accuracy:.3f}, Cost: {agent_graph.get('cost', 0):.3f}")
+            print(f"Accuracy: {accuracy:.3f}, Cost: {agent_graph.get('cost', 0):.3f}")
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -88,7 +88,7 @@ class TaskGraph:
         for attempt in range(max_retries):
             try:
                 response_oai = self.client_oai.chat.completions.create(
-                    model="gpt-4",
+                    model="gpt-4o",
                     messages=messages,
                     temperature=0.3
                 )
@@ -105,7 +105,7 @@ class TaskGraph:
 
             except Exception as e:
                 logging.warning(f"Request failed: {e}. Retrying ({attempt + 1}/{max_retries})...")
-                time.sleep(2 ** attempt)  # Exponential backoff for retries
+                time.sleep(0.2 ** attempt)  # Exponential backoff for retries
 
         raise RuntimeError("Maximum retry attempts reached. Unable to obtain a valid response.")
 

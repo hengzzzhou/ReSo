@@ -1,6 +1,30 @@
+import os
 import re
 import math
+import json
+def load_dataset(dataset_path):
+    """
+    Load dataset from the specified JSON file.
 
+    Args:
+        dataset_path (str): Path to the dataset JSON file.
+
+    Returns:
+        list: Loaded dataset as a list of dictionaries.
+    """
+    if os.path.exists(dataset_path):
+        with open(dataset_path, "r", encoding="utf-8") as f:
+            dataset = json.load(f)
+            print(f"Dataset loaded successfully with {len(dataset)} samples.")
+        return dataset
+def load_gsmhard_dataset(filepath):
+    dataset = []
+    with open(filepath, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                record = json.loads(line.strip())
+                dataset.append(record)
+    return dataset
 def remove_not(x):
     match_number = re.compile('[\$]?\ *10\^[{]?\ *-?[0-9]+\ *[}]?\ *[\$]?')
     result=re.findall(match_number, x)

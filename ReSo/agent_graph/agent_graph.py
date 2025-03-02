@@ -85,7 +85,7 @@ class AgentGraph:
                 print(f"Attempt {attempt + 1} failed: {e}")
                 if attempt == max_retries - 1:
                     raise
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.1)
         target_profile = answer
         target_profile_emb = await get_embedding_async(self.aclient, target_profile, self.embedding_cache)
 
@@ -140,7 +140,7 @@ class AgentGraph:
                 tries += 1
         raise RuntimeError(f"Node {agent.agent_id} failed after 3 retries")
 
-    async def mcts_inference_async(self, message, candidate_agents):
+    async def ReSo_testing(self, message, candidate_agents):
 
         tasks = [
             self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
@@ -203,6 +203,39 @@ class AgentGraph:
 
         return best_candidate, best_candidate_answer, best_cost
     
+
+    async def ReSo_training_rule_based(self, message, candidate_agents,gt_answer):
+
+        tasks = [
+                self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
+                for agent in candidate_agents
+            ]
+        results = await asyncio.gather(*tasks)
+
+        best_agent = None
+        best_reward = -float('inf')
+        best_answer = None
+        best_cost = None
+        for agent, (answer, cost,prompt_len,completion_len) in zip(candidate_agents, results):
+            reward_gt = reward_model(answer, gt_answer)
+            agent.inference_costs.append(cost)
+            agent._update_dynamic_field("inference_costs", agent.inference_costs)
+            agent.scoring_history.append(reward_gt)
+            agent._update_dynamic_field("scoring_history", agent.scoring_history)
+            agent.visit += 1
+            self.total_visit += 1
+            agent._update_dynamic_field("visit", agent.visit)
+            if reward_gt > best_reward:
+                best_reward = reward_gt
+                best_agent = agent
+                best_answer = answer
+                best_cost = cost
+                best_prompt_len=prompt_len
+                best_completion_len=completion_len
+        logging.info(f"[MCTS] Final choice: agent {best_agent.agent_id}, reward={best_reward:.3f}, cost={best_cost}, "
+             f"prompt_len: {best_prompt_len}, completion_len: {best_completion_len}")
+
+        return best_agent, best_answer, best_reward, best_cost
     async def ReSo_training_llm(self, message, candidate_agents,gt_answer):
 
         tasks = [
@@ -213,7 +246,6 @@ class AgentGraph:
 
         best_agent = None
         best_reward = -float('inf')
-        best_reward_gt=-float('inf')
         best_answer = None
         best_cost = None
         for agent, (answer, cost,prompt_len,completion_len) in zip(candidate_agents, results):
@@ -256,101 +288,68 @@ class AgentGraph:
              f"prompt_len: {best_prompt_len}, completion_len: {best_completion_len}")
 
         return best_agent, best_answer, best_reward, best_cost
-    async def ReSo_training_rule_based(self, message, candidate_agents,gt_answer):
 
-        tasks = [
-                self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
-                for agent in candidate_agents
-            ]
-        results = await asyncio.gather(*tasks)
-
-        best_agent = None
-        best_reward = -float('inf')
-        best_answer = None
-        best_cost = None
-        for agent, (answer, cost,prompt_len,completion_len) in zip(candidate_agents, results):
-            reward_gt = reward_model(answer, gt_answer)
-            agent.inference_costs.append(cost)
-            agent._update_dynamic_field("inference_costs", agent.inference_costs)
-            agent.scoring_history.append(reward_gt)
-            agent._update_dynamic_field("scoring_history", agent.scoring_history)
-            agent.visit += 1
-            self.total_visit += 1
-            agent._update_dynamic_field("visit", agent.visit)
-            if reward_gt > best_reward:
-                best_reward = reward_gt
-                best_agent = agent
-                best_answer = answer
-                best_cost = cost
-                best_prompt_len=prompt_len
-                best_completion_len=completion_len
-        logging.info(f"[MCTS] Final choice: agent {best_agent.agent_id}, reward={best_reward:.3f}, cost={best_cost}, "
-             f"prompt_len: {best_prompt_len}, completion_len: {best_completion_len}")
-
-        return best_agent, best_answer, best_reward, best_cost
-
-    async def build_agent_graph_test(self, question, task_graph,random_select):
-        agent_graph = {"nodes": [], "cost": 0}
-        pre_step = []
-        for node in task_graph:
-            subquestion = node
-            start_time = time.time()
-            if random_select is True:
-                candidate_agents=random.sample(self.agent_pool,self.top_k)
-            else:
-                candidate_agents = await self.select_agent_subset(subquestion)
-            elapsed_time = time.time() - start_time
-            print(f"Time taken to select candidate agent: {elapsed_time:.6f} seconds")
-            user_prompt = f"""your current sub-question: {subquestion}"""+"Conclude the answer by stating 'The answer is recorded as [what].The answer is therefore \\boxed{[ANSWER]}'"
-            message = []
-            message=message+pre_step
-            message.append({"role": "user", "content": user_prompt})
-
-            best_agent, answer, cost = await self.mcts_inference_async(message, candidate_agents)
-            pre_step.append({"role": "user", "content":f"One subquestion: {subquestion}" })
-            pre_step.append({"role": "assistant", "content": answer}) 
-            elapsed_infer = time.time() - start_time
-            print(f"Inference time: {elapsed_infer:.6f} seconds")
-            agent_graph["cost"] += cost
-            print(f"Agent {best_agent.agent_id} cost: {cost}")
-            new_node = {"sub_task": node}
-            new_node["selected_agent"] = best_agent.agent_id
-            new_node["answer"] = answer
-            agent_graph["nodes"].append(new_node)
-        return agent_graph
-    
-    async def build_agent_graph_train(self, question, task_graph,random_select,gt_subtask):
+    async def build_agent_graph(self, question, task_graph, random_select, mode="test", gt_subtask=None):
+        """
+        Build agent graph for either testing or training mode
+        
+        Args:
+            question: The main question
+            task_graph: Graph of subtasks
+            random_select: Whether to select agents randomly
+            mode: "test" or "train"
+            gt_subtask: Ground truth subtasks (required for training mode)
+        """
         agent_graph = {"nodes": [], "cost": 0}
         pre_step = []
         i = 0
+        
         for node in task_graph:
             subquestion = node
             start_time = time.time()
+            
+            # Select candidate agents
             if random_select is True:
-                candidate_agents=random.sample(self.agent_pool,self.top_k)
+                candidate_agents = random.sample(self.agent_pool, self.top_k)
             else:
                 candidate_agents = await self.select_agent_subset(subquestion)
             elapsed_time = time.time() - start_time
             print(f"Time taken to select candidate agent: {elapsed_time:.6f} seconds")
-
+            
+            # Prepare message for inference
             user_prompt = f"""your current sub-question: {subquestion}"""+"Conclude the answer by stating 'The answer is recorded as [what].The answer is therefore \\boxed{[ANSWER]}'"
             message = []
-            message=message+pre_step
+            message = message + pre_step
             message.append({"role": "user", "content": user_prompt})
-
-            best_agent, answer,reward, cost = await self.ReSo_training_rule_based(message, candidate_agents,gt_subtask[i])
-            pre_step.append({"role": "user", "content":f"One subquestion: {subquestion}" })
-            pre_step.append({"role": "assistant", "content": answer}) 
+            
+            # Run inference based on mode
+            if mode == "test":
+                best_agent, answer, cost = await self.ReSo_testing(message, candidate_agents)
+                reward = None
+            elif mode == "train":
+                best_agent, answer, reward, cost = await self.ReSo_training_rule_based(message, candidate_agents, gt_subtask[i])
+                i += 1
+            
+            # Update conversation history
+            pre_step.append({"role": "user", "content": f"One subquestion: {subquestion}"})
+            pre_step.append({"role": "assistant", "content": answer})
+            
+            # Log timings and costs
             elapsed_infer = time.time() - start_time
             print(f"Inference time: {elapsed_infer:.6f} seconds")
             agent_graph["cost"] += cost
             print(f"Agent {best_agent.agent_id} cost: {cost}")
-            new_node = {"sub_task": node}
-            new_node["agent_score"] = reward
-            new_node["selected_agent"] = best_agent.agent_id
-            new_node["answer"] = answer
+            
+            # Create and add node to graph
+            new_node = {"sub_task": node, "selected_agent": best_agent.agent_id, "answer": answer}
+            if mode == "train":
+                new_node["agent_score"] = reward
+                if reward == 0:
+                    agent_graph["nodes"].append(new_node)
+                    break
+                    
             agent_graph["nodes"].append(new_node)
-            i += 1
-            if reward == 0:
-                break
+        
         return agent_graph
+
+

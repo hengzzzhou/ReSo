@@ -123,8 +123,8 @@ async def main():
         logging.info(f"Ground Truth Subtasks: {sorted_gt_subtask}")
 
         # Construct the agent graph
-        agent_graph = await agent_graph_builder.build_agent_graph_train(
-            question, task_graph, random_select=random_select,gt_subtask=sorted_gt_subtask
+        agent_graph = await agent_graph_builder.build_agent_graph(
+            question, task_graph, random_select=random_select, mode="train",gt_subtask=sorted_gt_subtask
         )
 
         # Track cost
