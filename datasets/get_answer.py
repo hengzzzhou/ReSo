@@ -122,3 +122,34 @@ def last_boxed_only_string(string):
         return retval
 def parse_math_answer(raw_string):
     return remove_boxed(last_boxed_only_string(raw_string))
+
+def parse_gpqa_answer(text):
+    """
+    Parse a mathematical answer from text, extracting content from \boxed{} notation.
+    
+    Args:
+        text (str): The text containing the mathematical answer
+        
+    Returns:
+        str or None: The extracted answer, or None if no answer is found
+    """
+    # Try to find content inside \boxed{...}
+    boxed_pattern = r'\\boxed\s*\{([^{}]+)\}'
+    boxed_match = re.search(boxed_pattern, text)
+    if boxed_match:
+        answer = boxed_match.group(1).strip()
+        return answer
+    
+    # Try other common patterns
+    alt_patterns = [
+        r'The answer is (?:therefore |)\\boxed\s*\{([^{}]+)\}',
+        r'The answer is (?:therefore |)(?:recorded as |)\[?([^\]]+)\]?',
+        r'final answer:?\s*([0-9A-Za-z\.\-]+)',
+    ]
+    
+    for pattern in alt_patterns:
+        match = re.search(pattern, text)
+        if match:
+            return match.group(1).strip()
+    
+    return None

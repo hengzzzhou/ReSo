@@ -63,8 +63,6 @@ class AgentGraph:
         # self.special_token = self.tokenizer.encode('<extra_0>')[0]
         # self.rm = Qwen2ForProcessRewardModel.from_pretrained('path_to_model', device_map='auto', torch_dtype=torch.bfloat16).eval()
 
-    # ... (rest of the AgentGraph class remains, using the functions from the utility modules)
-
 
     async def select_agent_subset(self, subquestion):
 

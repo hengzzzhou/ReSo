@@ -1,3 +1,4 @@
+import argparse
 from collections import defaultdict, deque
 import json
 import random
@@ -184,8 +185,17 @@ class GenDataset:
             json.dump(all_generated_data, out_f, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate complex math questions dataset")
+    parser.add_argument("-n", "--num_questions", type=int, required=True, help="Number of questions to generate")
+    parser.add_argument("-c", "--complexity", type=int, required=True, help="Complexity level of questions")
+    parser.add_argument("-o", "--output", type=str, help="Output file path (optional)")
+
+    args = parser.parse_args()
+
     sub_data = "datasets/sub_question/math_test.json"
     gen = GenDataset(sub_data)
 
-    current_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
-    gen.generate_complex_questions(81, 3, f"datasets/mixed/mix_math_test_3_{current_time}.json")
+    default_filename = f"datasets/mixed/mix_math_test_{args.complexity}_{time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())}.json"
+    output_file = args.output if args.output else default_filename
+
+    gen.generate_complex_questions(args.num_questions, args.complexity, output_file)
