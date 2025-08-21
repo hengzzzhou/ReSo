@@ -1,8 +1,17 @@
+"""Answer extraction utilities for mathematical datasets.
+
+This module provides functions for loading datasets and extracting numerical
+answers from various text formats commonly used in mathematical problem solving.
+"""
+
 import os
 import re
 import math
 import json
-def load_dataset(dataset_path):
+from typing import List, Dict, Any, Optional, Union
+
+
+def load_dataset(dataset_path: str) -> List[Dict[str, Any]]:
     """
     Load dataset from the specified JSON file.
 

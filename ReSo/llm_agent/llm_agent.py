@@ -1,25 +1,55 @@
+"""LLM Agent Module for Multi-Agent Mathematical Reasoning.
+
+This module implements the LLMAgent class which encapsulates individual agents
+with their inference capabilities, cost tracking, and persistent storage.
+"""
+
 import asyncio
 import configparser
 import logging
 import sqlite3
 import json
+import os
+from typing import List, Dict, Any, Optional, Tuple, Union
+
 from openai import AsyncOpenAI
-import configparser
-import json
-import sqlite3
+from dotenv import load_dotenv
 
 from ReSo.llm_agent.cost import cost_count
-from dotenv import load_dotenv
-import os
 
 class LLMAgent:
+    """Large Language Model Agent for Mathematical Problem Solving.
+    
+    LLMAgent encapsulates an individual reasoning agent with specific expertise,
+    tracking performance metrics and persisting data to a database. Each agent
+    has a specialized prompt and maintains history for reputation-based selection.
+    
+    Attributes:
+        agent_id: Unique identifier for the agent
+        base_model: The underlying LLM model name
+        profile: Agent's expertise profile description
+        prompt: Specialized system prompt for the agent
+        visit: Number of times agent has been selected
+        inference_costs: List of costs from previous inferences
+        scoring_history: List of reward scores from previous tasks
+        db_path: Path to the SQLite database for persistence
     """
-    LLMAgent encapsulates the basic information and inference capabilities of an agent,
-    and is responsible for persisting dynamic data (such as cost, scores, and visit counts)
-    to a database.
-    """
-    def __init__(self, db_path, agent_id, base_model, profile, prompt,
-                 inference_costs=None, scoring_history=None, visit=0):
+    
+    def __init__(self, db_path: str, agent_id: str, base_model: str, 
+                 profile: str, prompt: str, inference_costs: Optional[List[float]] = None,
+                 scoring_history: Optional[List[float]] = None, visit: int = 0):
+        """Initialize LLMAgent with configuration and database connection.
+        
+        Args:
+            db_path: Path to SQLite database for persistence
+            agent_id: Unique identifier for this agent
+            base_model: Name of the underlying LLM model
+            profile: Description of agent's expertise
+            prompt: Specialized system prompt for the agent
+            inference_costs: Historical inference costs (default: empty list)
+            scoring_history: Historical reward scores (default: empty list)
+            visit: Number of previous selections (default: 0)
+        """
         self.agent_id = agent_id
         self.base_model = base_model
         self.profile = profile
@@ -30,24 +60,35 @@ class LLMAgent:
         self.scoring_history = scoring_history if scoring_history is not None else []
         self._initialize_database()
 
-    def _initialize_database(self):
+    def _initialize_database(self) -> None:
+        """Initialize the database and ensure the 'agents' table exists.
+        
+        Creates the agents table with all necessary columns if it doesn't exist.
+        This method is called during agent initialization to ensure database
+        schema consistency.
         """
-        Initialize the database and ensure the 'agents' table exists.
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        create_table_query = """
-        CREATE TABLE IF NOT EXISTS agents (
-            agent_id TEXT PRIMARY KEY,
-            base_model TEXT,
-            profile TEXT,
-            prompt TEXT,
-            inference_costs TEXT,
-            scoring_history TEXT,
-            visit INTEGER DEFAULT 0
-        )
-        """
-        cursor.execute(create_table_query)
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                create_table_query = """
+                CREATE TABLE IF NOT EXISTS agents (
+                    agent_id TEXT PRIMARY KEY,
+                    base_model TEXT NOT NULL,
+                    profile TEXT,
+                    prompt TEXT NOT NULL,
+                    inference_costs TEXT DEFAULT '[]',
+                    scoring_history TEXT DEFAULT '[]',
+                    visit INTEGER DEFAULT 0,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+                """
+                cursor.execute(create_table_query)
+                conn.commit()
+                logging.debug(f"Database initialized for agent {self.agent_id}")
+        except sqlite3.Error as e:
+            logging.error(f"Database initialization failed: {e}")
+            raise
         conn.commit()
         conn.close()
 

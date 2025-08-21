@@ -1,3 +1,10 @@
+"""Agent Graph Module for Multi-Agent Reasoning System.
+
+This module implements the AgentGraph class which manages agent pools, performs
+agent selection based on problem requirements, and coordinates multi-agent inference
+using MCTS-based approach for mathematical problem solving.
+"""
+
 import asyncio
 import copy
 import math
@@ -6,6 +13,7 @@ import random
 import json
 import time
 import logging
+from typing import List, Dict, Any, Tuple, Optional, Union
 
 import torch
 import torch.nn.functional as F
@@ -24,12 +32,41 @@ from ReSo.agent_graph.logging_setup import setup_logging
 setup_logging()
 
 class AgentGraph:
+    """Multi-Agent Graph for Mathematical Problem Solving.
+    
+    AgentGraph manages a pool of specialized agents and coordinates their selection
+    and inference for solving complex mathematical problems. It uses MCTS-based
+    approach with Upper Confidence Bound (UCB) scoring for agent selection.
+    
+    Attributes:
+        agent_pool: List of available agents
+        similarity_weight: Weight for similarity scoring in agent selection
+        reputation_weight: Weight for agent reputation in scoring
+        cost_weight: Weight for cost consideration in agent selection
+        threshold: Similarity threshold for agent filtering
+        exploration_const: Exploration constant for UCB scoring
+        top_k: Number of top agents to select for inference
+        mode: Operating mode ('train' or 'test')
+        total_visit: Total number of agent visits across all agents
     """
-    AgentGraph manages the agent pool, selects candidate agents based on generated prompts,
-    and performs multi-agent inference using an MCTS-based approach.
-    """
-    def __init__(self, agent_pool, similarity_weight=1.0, reputation_weight=1.0, cost_weight=1.0,
-                 threshold=0.5, exploration_const=1.0, top_k=10, mode="train", total_visit=0):
+    
+    def __init__(self, agent_pool: List[Any], similarity_weight: float = 1.0, 
+                 reputation_weight: float = 1.0, cost_weight: float = 1.0,
+                 threshold: float = 0.5, exploration_const: float = 1.0, 
+                 top_k: int = 10, mode: str = "train", total_visit: int = 0):
+        """Initialize AgentGraph with configuration parameters.
+        
+        Args:
+            agent_pool: List of available agents for problem solving
+            similarity_weight: Weight for similarity scoring (default: 1.0)
+            reputation_weight: Weight for agent reputation (default: 1.0)
+            cost_weight: Weight for cost consideration (default: 1.0)
+            threshold: Similarity threshold for filtering (default: 0.5)
+            exploration_const: UCB exploration constant (default: 1.0)
+            top_k: Number of top agents to select (default: 10)
+            mode: Operating mode - 'train' or 'test' (default: 'train')
+            total_visit: Initial total visit count (default: 0)
+        """
         self.agent_pool = agent_pool
         self.similarity_weight = similarity_weight
         self.reputation_weight = reputation_weight
@@ -58,14 +95,29 @@ class AgentGraph:
         oai_base_url = os.getenv('OAI_BASE_URL')
         self.aclient = AsyncOpenAI(base_url=oai_base_url, api_key=oai_api_key)
 
-        # Uncomment and modify if you need a tokenizer or reward model
+        # Initialize tokenizer and reward model (uncomment if needed)
         # self.tokenizer = AutoTokenizer.from_pretrained('path_to_model')
         # self.special_token = self.tokenizer.encode('<extra_0>')[0]
-        # self.rm = Qwen2ForProcessRewardModel.from_pretrained('path_to_model', device_map='auto', torch_dtype=torch.bfloat16).eval()
+        # self.rm = Qwen2ForProcessRewardModel.from_pretrained(
+        #     'path_to_model', device_map='auto', torch_dtype=torch.bfloat16
+        # ).eval()
 
 
-    async def select_agent_subset(self, subquestion):
+    async def select_agent_subset(self, subquestion: str) -> List[Any]:
+        """Select a subset of agents most suitable for solving a subquestion.
+        
+        This method generates a target expert profile for the subquestion,
+        evaluates all agents against this profile, and returns the top-k
+        candidates based on UCB scoring.
+        
+        Args:
+            subquestion: The mathematical subquestion to solve
+            
+        Returns:
+            List of top-k candidate agents for the subquestion
+        """
 
+        # Generate target expert profile with retry logic
         max_retries = 3
         for attempt in range(max_retries):
             try:
@@ -77,68 +129,134 @@ class AgentGraph:
                     ],
                     temperature=0.2
                 )
-                answer = response.choices[0].message.content.strip()
+                target_profile = response.choices[0].message.content.strip()
                 break
             except Exception as e:
-                print(f"Attempt {attempt + 1} failed: {e}")
+                logging.warning(f"Profile generation attempt {attempt + 1} failed: {e}")
                 if attempt == max_retries - 1:
                     raise
                 await asyncio.sleep(0.1)
-        target_profile = answer
-        target_profile_emb = await get_embedding_async(self.aclient, target_profile, self.embedding_cache)
-
-        tasks = [self.evaluate_agent(agent, target_profile_emb) for agent in self.agent_pool]
-        candidates = await asyncio.gather(*tasks)     
-        #random.shuffle(candidates)
+        # Get embedding for target profile and evaluate all agents
+        target_profile_emb = await get_embedding_async(
+            self.aclient, target_profile, self.embedding_cache
+        )
+        
+        evaluation_tasks = [
+            self.evaluate_agent(agent, target_profile_emb) for agent in self.agent_pool
+        ]
+        candidates = await asyncio.gather(*evaluation_tasks)
+        
+        # Sort candidates by UCB score and select top-k
         candidates.sort(key=lambda x: x[1], reverse=True)
         top_candidates = [agent for agent, score in candidates[:self.top_k]]
-        print(f"#########{self.top_k}")
-        name = [agent.agent_id for agent in top_candidates]
-        logging.info(f"Selected candidate agent {name} from {len(top_candidates)} candidates out of {len(self.agent_pool)} agents")
+        
+        selected_names = [agent.agent_id for agent in top_candidates]
+        logging.info(
+            f"Selected {len(top_candidates)} candidate agents {selected_names} "
+            f"from pool of {len(self.agent_pool)} agents"
+        )
         return top_candidates
 
-    async def evaluate_agent(self, agent, target_profile_emb):
-        agent_prompt_emb = await asyncio.wait_for(get_embedding_async(self.aclient,agent.prompt,self.embedding_cache), timeout=600)
+    async def evaluate_agent(self, agent: Any, target_profile_emb: np.ndarray) -> Tuple[Any, float]:
+        """Evaluate an agent's suitability for a task using UCB scoring.
+        
+        The evaluation considers:
+        - Similarity between agent prompt and target profile
+        - Agent's historical performance (reputation)
+        - Agent's cost efficiency
+        - Exploration bonus for less-visited agents
+        
+        Args:
+            agent: The agent to evaluate
+            target_profile_emb: Embedding of the target expert profile
+            
+        Returns:
+            Tuple of (agent, ucb_score)
+        """
+        # Calculate similarity score
+        agent_prompt_emb = await asyncio.wait_for(
+            get_embedding_async(self.aclient, agent.prompt, self.embedding_cache), 
+            timeout=600
+        )
         sim_profile = cosine_similarity(target_profile_emb, agent_prompt_emb)
-        sim = self.similarity_weight * (sim_profile - 0.5) * 2  
-        alpha, beta = 1, 1
+        similarity_score = self.similarity_weight * (sim_profile - 0.5) * 2
+        
+        # Calculate reputation score using Beta distribution
+        alpha, beta = 1, 1  # Prior parameters
         if agent.scoring_history:
             avg_reward = (sum(agent.scoring_history) + alpha) / (len(agent.scoring_history) + beta)
         else:
             avg_reward = alpha / beta
-        reputation = self.reputation_weight * avg_reward
-
+        reputation_score = self.reputation_weight * avg_reward
+        
+        # Calculate cost penalty
         if agent.inference_costs:
-            cost = sum(agent.inference_costs) / len(agent.inference_costs)
+            avg_cost = sum(agent.inference_costs) / len(agent.inference_costs)
         else:
-            cost = 0
-        cost_penalty = math.log1p(cost)  # log(1 + cost)
-
-        final_score = (reputation - cost_penalty + sim) / 2
-
-        visit_number = agent.visit + 1e-8
-        exploration_term = self.exploration_const * math.sqrt(math.log(self.total_visit + 1.01) / visit_number)
-
-        similarity_factor = 1 / (1 + math.exp(-10 * (sim - self.threshold)))  
+            avg_cost = 0
+        cost_penalty = math.log1p(avg_cost)  # log(1 + cost) for numerical stability
+        
+        # Combine scores
+        base_score = (reputation_score - cost_penalty + similarity_score) / 2
+        
+        # Add exploration term (UCB)
+        visit_count = agent.visit + 1e-8  # Avoid division by zero
+        exploration_bonus = self.exploration_const * math.sqrt(
+            math.log(self.total_visit + 1.01) / visit_count
+        )
+        
+        # Apply similarity threshold with sigmoid
+        similarity_threshold = 1 / (1 + math.exp(-10 * (similarity_score - self.threshold)))
+        
+        # Final UCB score with small random noise for tie-breaking
         random_noise = random.uniform(-1e-5, 1e-5)
-        ucb_score = (final_score + exploration_term) * similarity_factor + random_noise
-        #sim=sim+random_noise
-        logging.info(f"Agent {agent.agent_id}: sim={sim:.3f}, reputation={reputation:.3f}, "
-                    f"cost={cost_penalty:.3f}, final_score={final_score:.3f}, ucb_score={ucb_score:.3f}")
+        ucb_score = (base_score + exploration_bonus) * similarity_threshold + random_noise
+        
+        logging.debug(
+            f"Agent {agent.agent_id}: similarity={similarity_score:.3f}, "
+            f"reputation={reputation_score:.3f}, cost_penalty={cost_penalty:.3f}, "
+            f"base_score={base_score:.3f}, ucb_score={ucb_score:.3f}"
+        )
+        
         return (agent, ucb_score)
 
-    async def agent_inference(self, agent, message):
-        tries = 0
-        while tries < 3:
+    async def agent_inference(self, agent: Any, message: List[Dict[str, str]]) -> Tuple[str, float, int, int]:
+        """Perform inference with an agent with retry logic.
+        
+        Args:
+            agent: The agent to perform inference with
+            message: The conversation messages for inference
+            
+        Returns:
+            Tuple of (answer, cost, prompt_length, completion_length)
+            
+        Raises:
+            RuntimeError: If agent fails after maximum retries
+        """
+        max_retries = 3
+        for attempt in range(max_retries):
             try:
-                answer, cost,prompt_len,completion_len=await asyncio.wait_for(agent.inference(message),timeout=600)
-                return answer, cost,prompt_len,completion_len
+                result = await asyncio.wait_for(agent.inference(message), timeout=600)
+                answer, cost, prompt_len, completion_len = result
+                return answer, cost, prompt_len, completion_len
             except Exception as e:
-                print(f"Error during execution of node {agent.agent_id}: {e}")
-                tries += 1
-        raise RuntimeError(f"Node {agent.agent_id} failed after 3 retries")
+                logging.warning(f"Agent {agent.agent_id} inference attempt {attempt + 1} failed: {e}")
+                if attempt == max_retries - 1:
+                    raise RuntimeError(f"Agent {agent.agent_id} failed after {max_retries} retries")
 
-    async def ReSo_testing(self, message, candidate_agents):
+    async def reso_testing(self, message: List[Dict[str, str]], candidate_agents: List[Any]) -> Tuple[Any, str, float]:
+        """Perform testing inference using voting mechanism.
+        
+        Multiple candidate agents solve the problem independently, and the final
+        answer is determined by majority voting among numerically similar solutions.
+        
+        Args:
+            message: The conversation messages for inference
+            candidate_agents: List of candidate agents for inference
+            
+        Returns:
+            Tuple of (best_agent, best_answer, cost)
+        """
 
         tasks = [
             self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
@@ -202,7 +320,22 @@ class AgentGraph:
         return best_candidate, best_candidate_answer, best_cost
     
 
-    async def ReSo_training_rule_based(self, message, candidate_agents,gt_answer):
+    async def reso_training_rule_based(self, message: List[Dict[str, str]], 
+                                      candidate_agents: List[Any], 
+                                      gt_answer: Union[str, float]) -> Tuple[Any, str, float, float]:
+        """Perform training inference with rule-based reward calculation.
+        
+        All candidate agents solve the problem, and rewards are calculated based
+        on comparison with ground truth answers using rule-based metrics.
+        
+        Args:
+            message: The conversation messages for inference
+            candidate_agents: List of candidate agents for inference
+            gt_answer: Ground truth answer for reward calculation
+            
+        Returns:
+            Tuple of (best_agent, best_answer, best_reward, cost)
+        """
 
         tasks = [
                 self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
@@ -234,7 +367,22 @@ class AgentGraph:
              f"prompt_len: {best_prompt_len}, completion_len: {best_completion_len}")
 
         return best_agent, best_answer, best_reward, best_cost
-    async def ReSo_training_llm(self, message, candidate_agents,gt_answer):
+    async def reso_training_llm(self, message: List[Dict[str, str]], 
+                               candidate_agents: List[Any], 
+                               gt_answer: Union[str, float]) -> Tuple[Any, str, float, float]:
+        """Perform training inference with LLM-based reward calculation.
+        
+        All candidate agents solve the problem, and rewards are calculated using
+        a learned reward model for more nuanced evaluation.
+        
+        Args:
+            message: The conversation messages for inference
+            candidate_agents: List of candidate agents for inference
+            gt_answer: Ground truth answer for reward calculation
+            
+        Returns:
+            Tuple of (best_agent, best_answer, best_reward, cost)
+        """
 
         tasks = [
                 self.agent_inference(agent, message=[{"role": "system", "content": agent.prompt}] + copy.deepcopy(message))
@@ -287,66 +435,112 @@ class AgentGraph:
 
         return best_agent, best_answer, best_reward, best_cost
 
-    async def build_agent_graph(self, question, task_graph, random_select, mode="test", gt_subtask=None):
-        """
-        Build agent graph for either testing or training mode
+    async def build_agent_graph(self, question: str, task_graph: List[str], 
+                               random_select: bool, mode: str = "test", 
+                               gt_subtask: Optional[List[Union[str, float]]] = None) -> Dict[str, Any]:
+        """Build agent graph for solving complex multi-step problems.
+        
+        This method orchestrates the entire problem-solving process by:
+        1. Selecting appropriate agents for each subtask
+        2. Coordinating inference across multiple steps
+        3. Managing conversation history and dependencies
+        4. Calculating costs and performance metrics
         
         Args:
-            question: The main question
-            task_graph: Graph of subtasks
-            random_select: Whether to select agents randomly
-            mode: "test" or "train"
-            gt_subtask: Ground truth subtasks (required for training mode)
+            question: The main question to solve
+            task_graph: List of subtasks in dependency order
+            random_select: Whether to randomly select agents (for ablation)
+            mode: Operating mode - 'test' or 'train'
+            gt_subtask: Ground truth subtask answers (required for training)
+            
+        Returns:
+            Dictionary containing:
+                - nodes: List of solved subtask nodes
+                - cost: Total inference cost
+                - Additional metrics based on mode
+                
+        Raises:
+            ValueError: If training mode is used without ground truth
         """
-        agent_graph = {"nodes": [], "cost": 0}
-        pre_step = []
-        i = 0
+        if mode == "train" and gt_subtask is None:
+            raise ValueError("Ground truth subtasks required for training mode")
+            
+        agent_graph = {"nodes": [], "cost": 0, "total_time": 0}
+        conversation_history = []
+        subtask_index = 0
         
-        for node in task_graph:
-            subquestion = node
+        for subtask in task_graph:
             start_time = time.time()
             
-            # Select candidate agents
-            if random_select is True:
+            # Agent selection phase
+            if random_select:
                 candidate_agents = random.sample(self.agent_pool, self.top_k)
+                logging.info(f"Randomly selected {len(candidate_agents)} agents")
             else:
-                candidate_agents = await self.select_agent_subset(subquestion)
-            elapsed_time = time.time() - start_time
-            print(f"Time taken to select candidate agent: {elapsed_time:.6f} seconds")
+                candidate_agents = await self.select_agent_subset(subtask)
             
-            # Prepare message for inference
-            user_prompt = f"""your current sub-question: {subquestion}"""+"Conclude the answer by stating 'The answer is recorded as [what].The answer is therefore \\boxed{[ANSWER]}'"
-            message = []
-            message = message + pre_step
-            message.append({"role": "user", "content": user_prompt})
+            selection_time = time.time() - start_time
+            logging.info(f"Agent selection completed in {selection_time:.3f}s")
             
-            # Run inference based on mode
+            # Prepare inference message
+            user_prompt = (
+                f"Your current sub-question: {subtask}\n"
+                "Conclude the answer by stating 'The answer is recorded as [what]. "
+                "The answer is therefore \\boxed{[ANSWER]}'"
+            )
+            
+            inference_message = conversation_history + [
+                {"role": "user", "content": user_prompt}
+            ]
+            
+            # Perform inference based on mode
+            inference_start = time.time()
             if mode == "test":
-                best_agent, answer, cost = await self.ReSo_testing(message, candidate_agents)
+                best_agent, answer, cost = await self.reso_testing(inference_message, candidate_agents)
                 reward = None
             elif mode == "train":
-                best_agent, answer, reward, cost = await self.ReSo_training_rule_based(message, candidate_agents, gt_subtask[i])
-                i += 1
+                best_agent, answer, reward, cost = await self.reso_training_rule_based(
+                    inference_message, candidate_agents, gt_subtask[subtask_index]
+                )
+                subtask_index += 1
+            
+            inference_time = time.time() - inference_start
+            total_time = time.time() - start_time
             
             # Update conversation history
-            pre_step.append({"role": "user", "content": f"One subquestion: {subquestion}"})
-            pre_step.append({"role": "assistant", "content": answer})
+            conversation_history.extend([
+                {"role": "user", "content": f"Sub-question: {subtask}"},
+                {"role": "assistant", "content": answer}
+            ])
             
-            # Log timings and costs
-            elapsed_infer = time.time() - start_time
-            print(f"Inference time: {elapsed_infer:.6f} seconds")
+            # Update agent graph
             agent_graph["cost"] += cost
-            print(f"Agent {best_agent.agent_id} cost: {cost}")
+            agent_graph["total_time"] += total_time
             
-            # Create and add node to graph
-            new_node = {"sub_task": node, "selected_agent": best_agent.agent_id, "answer": answer}
+            # Create node record
+            node_record = {
+                "subtask": subtask,
+                "selected_agent": best_agent.agent_id,
+                "answer": answer,
+                "cost": cost,
+                "selection_time": selection_time,
+                "inference_time": inference_time,
+                "total_time": total_time
+            }
+            
             if mode == "train":
-                new_node["agent_score"] = reward
+                node_record["reward"] = reward
+                # Stop if agent fails (reward = 0)
                 if reward == 0:
-                    agent_graph["nodes"].append(new_node)
+                    logging.warning(f"Agent failed on subtask {subtask_index}, stopping")
+                    agent_graph["nodes"].append(node_record)
                     break
-                    
-            agent_graph["nodes"].append(new_node)
+            
+            agent_graph["nodes"].append(node_record)
+            logging.info(
+                f"Completed subtask {subtask_index + 1}/{len(task_graph)} "
+                f"with agent {best_agent.agent_id} (cost: {cost:.4f}, time: {total_time:.3f}s)"
+            )
         
         return agent_graph
 

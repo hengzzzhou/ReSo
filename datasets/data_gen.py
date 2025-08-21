@@ -8,22 +8,44 @@ import os
 from typing import List, Dict, Any, Tuple
 import time
 
-class GenDataset:
-    def __init__(self, data_dir: str):
-        with open(data_dir, 'r') as file:
+class DatasetGenerator:
+    """Generate complex multi-step mathematical problems from simple sub-questions.
+    
+    This class creates complex mathematical problems by combining multiple sub-questions
+    in a DAG (Directed Acyclic Graph) structure, where child questions depend on the
+    answers from parent questions.
+    """
+    
+    def __init__(self, data_path: str):
+        """Initialize the generator with source data.
+        
+        Args:
+            data_path: Path to the JSON file containing sub-question data
+        """
+        with open(data_path, 'r') as file:
             self.original_data = json.load(file)
         self.generated_data = []
 
     def _generate_random_dag(self, num_nodes: int) -> Dict[int, List[int]]:
+        """Generate a random Directed Acyclic Graph (DAG) structure.
+        
+        Args:
+            num_nodes: Number of nodes in the graph
+            
+        Returns:
+            Dictionary representing the DAG where keys are parent nodes and values are lists of children
+        """
         dag = {i: [] for i in range(num_nodes)}
         node_indices = list(range(num_nodes))
         random.shuffle(node_indices)
 
+        # Ensure basic connectivity - each node (except first) has at least one parent
         for i in range(1, num_nodes):
             parent = random.choice(node_indices[:i])
             child = node_indices[i]
             dag[parent].append(child)
 
+        # Add extra edges to create more complex dependencies
         extra_edges = random.randint(0, num_nodes - 1)
         for _ in range(extra_edges):
             parent_idx = random.randint(0, num_nodes - 2)
@@ -35,43 +57,76 @@ class GenDataset:
 
         return dag
 
-    def is_same_magnitude(self, combined_value, num1):
+    def _is_same_magnitude(self, combined_value: float, num1: float) -> bool:
+        """Check if two numbers are within the same order of magnitude.
+        
+        Args:
+            combined_value: First number to compare
+            num1: Second number to compare
+            
+        Returns:
+            True if numbers are within 1 order of magnitude
+        """
         if combined_value <= 0 or num1 <= 0:
             return False
         magnitude_combined = math.floor(math.log10(combined_value))
         magnitude_num1 = math.floor(math.log10(num1))
         return abs(magnitude_combined - magnitude_num1) <= 1
 
-    def _compute_multi_relation(self, parent_answers: List[float], child_vals: List[float]) -> Tuple[float, str]:
+    def _compute_multi_relation(self, parent_answers: List[float], child_vals: List[float]) -> Tuple[float, float, bool]:
+        """Compute the relationship between parent answers and child question values.
+        
+        Args:
+            parent_answers: List of numerical answers from parent questions
+            child_vals: List of values from the child question (typically containing one value)
+            
+        Returns:
+            Tuple containing (new_value, adjustment, magnitude_check)
+        """
         combined_value = sum(parent_answers)
-        num1 = child_vals if child_vals else 0.0
-        x = num1 - combined_value
-        desc = f"The sum of the answers of the parent nodes plus ({x:.2f}) gives the unknown number of the question stem for this node."
-        bool_ok = self.is_same_magnitude(abs(combined_value), num1)
-        return num1, x, bool_ok
+        num1 = child_vals[0] if child_vals else 0.0
+        adjustment = num1 - combined_value
+        magnitude_ok = self._is_same_magnitude(abs(combined_value), num1)
+        return num1, adjustment, magnitude_ok
 
     def _generate_final_integration(self, answers: List[float]) -> Tuple[str, float]:
-        str_mut = '*'.join([f'Answer[{i}]' for i in range(len(answers))])
+        """Generate the final integration question that combines all sub-question answers.
+        
+        Args:
+            answers: List of answers from all sub-questions
+            
+        Returns:
+            Tuple containing (final_question_text, final_answer_value)
+        """
+        answer_refs = '*'.join([f'Answer[{i}]' for i in range(len(answers))])
         final_question = (
-            f"Please calculate the value of {str_mut}. Conclude the answer by stating 'The answer is therefore \\boxed{{[ANSWER]}}.'"
+            f"Please calculate the value of {answer_refs}. "
+            f"Conclude the answer by stating 'The answer is therefore \\boxed{{[ANSWER]}}.'"
         )
         final_answer = math.prod(answers)
         return final_question, final_answer
 
-    def generate_complex_questions(self, N: int, complex: int, save_path: str):
+    def generate_complex_questions(self, num_questions: int, complexity: int, save_path: str):
+        """Generate complex multi-step mathematical questions.
+        
+        Args:
+            num_questions: Number of complex questions to generate
+            complexity: Number of sub-questions to combine (complexity level)
+            save_path: Path where to save the generated dataset
+        """
         all_generated_data = []
         Q_ID_all = []
         index = 0
 
         while True:
             index += 1
-            print(index)
-            n = complex
+            print(f"Generating question {index}")
+            n = complexity
 
             dag = self._generate_random_dag(n)
 
-            if len(self.original_data) < n or index > N:
-                print("Not enough data to sample. Breaking loop.")
+            if len(self.original_data) < n or index > num_questions:
+                print(f"Generated {len(all_generated_data)} questions. Breaking loop.")
                 break
 
             sampled_items = random.sample(self.original_data, n)
@@ -115,10 +170,10 @@ class GenDataset:
                     continue
 
                 parent_answers = [node_info[p]["answer_val"] for p in parents]
-                new_val, x, bool_ok = self._compute_multi_relation(parent_answers, node_info[child]["question_vals"])
+                new_val, adjustment, magnitude_ok = self._compute_multi_relation(parent_answers, node_info[child]["question_vals"])
                 node_info[child]["question_vals"] = [new_val]
 
-                combined_desc = f"a constant calculated by adding the sum of Answer{parents} to the number ({x:.2f}). "
+                combined_desc = f"a constant calculated by adding the sum of Answer{parents} to the number ({adjustment:.2f}). "
                 edge_descriptions.append(combined_desc)
                 node_info[child]['problem_UNK'] = re.sub(
                     r'UNK\(a constant can be caculuted by other answers\)',
@@ -181,6 +236,7 @@ class GenDataset:
 
             all_generated_data.append(complex_question_item)
 
+        print(f"\nSaving {len(all_generated_data)} generated questions to {save_path}")
         with open(save_path, 'w', encoding='utf-8') as out_f:
             json.dump(all_generated_data, out_f, ensure_ascii=False, indent=2)
 
@@ -192,10 +248,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    sub_data = "datasets/sub_question/math_test.json"
-    gen = GenDataset(sub_data)
+    sub_data_path = "datasets/sub_question/math_test.json"
+    generator = DatasetGenerator(sub_data_path)
 
     default_filename = f"datasets/mixed/mix_math_test_{args.complexity}_{time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())}.json"
     output_file = args.output if args.output else default_filename
 
-    gen.generate_complex_questions(args.num_questions, args.complexity, output_file)
+    generator.generate_complex_questions(args.num_questions, args.complexity, output_file)
