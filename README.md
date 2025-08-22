@@ -1,291 +1,283 @@
-# ReSo: Reasoning with Self-Optimization for Mathematical Problem Solving
+<div align="center">
 
-A comprehensive framework for multi-step mathematical problem solving using reinforcement learning and self-optimization techniques.
+# ReSo: A Reward-driven Self-organizing LLM-based Multi-Agent System for Reasoning Tasks
 
-## 🚀 Quick Start
+[![Paper](https://img.shields.io/badge/arXiv-2503.02390-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.02390)
+[![HuggingFace Models](https://img.shields.io/badge/HuggingFace-Models-FFD14D?style=for-the-badge&logo=huggingface&logoColor=black&labelColor=000000)](https://huggingface.co/henggg/ReSo/tree/main)
+[![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-FFD14D?style=for-the-badge&logo=huggingface&logoColor=black&labelColor=000000)](https://huggingface.co/datasets/henggg/ReSo-MAS)
 
-### Prerequisites
+</div>
+
+<div align="center" style="font-family: Arial, sans-serif;">
+  <p>
+    <a href="#news" style="text-decoration: none; font-weight: bold;">🎉 News</a> •
+    <a href="#introduction" style="text-decoration: none; font-weight: bold;">📖 Introduction</a> •
+    <a href="#main-results" style="text-decoration: none; font-weight: bold;">📊 Main Results</a>
+  </p>
+  <p>
+    <a href="#getting-started" style="text-decoration: none; font-weight: bold;">✨ Getting Started</a> •
+    <a href="#usage" style="text-decoration: none; font-weight: bold;">🎯 Usage</a> •
+    <a href="#data-generation" style="text-decoration: none; font-weight: bold;">📊 Data Generation</a> •
+    <a href="#pre-trained-models" style="text-decoration: none; font-weight: bold;">🤖 Models</a> •
+    <a href="#development" style="text-decoration: none; font-weight: bold;">🛠️ Development</a> •
+    <a href="#contact" style="text-decoration: none; font-weight: bold;">📨 Contact</a> •
+    <a href="#citation" style="text-decoration: none; font-weight: bold;">🎈 Citation</a>
+  </p>
+</div>
+
+---
+
+# 🎉 News
+
+- [2025-08-21] ReSo has been accepted to EMNLP 2025! See you in Suzhou in November.
+
+
+# 📖 Introduction
+
+ReSo is a comprehensive framework for multi-step mathematical and scientific reasoning. It combines a self-organizing multi-agent architecture with reward-driven optimization to plan, solve, and refine solutions iteratively.
+
+<p align="center">
+  <img src="image/intro.png" alt="ReSo intro" style="width: 85%; max-width: 900px;">
+</p>
+
+Key capabilities:
+- Agent graph for task decomposition and collaboration
+- Reward modeling for iterative self-optimization
+- Modular LLM backends and configurable pipelines
+
+<p align="center">
+  <img src="image/reso.png" alt="ReSo pipeline" style="width: 85%; max-width: 1000px;">
+</p>
+
+# 📊 Main Results
+
+ReSo achieves competitive performance on math and science reasoning benchmarks. See examples below and refer to the paper for full details.
+
+<p align="center">
+  <img src="image/result.png" alt="ReSo results" style="width: 80%; max-width: 1000px;">
+</p>
+
+# ✨ Getting Started
+
+## Prerequisites
 
 - Python 3.10+
 - CUDA-compatible GPU (recommended)
 - Git
 
-### Installation
+## Installation
 
-1. **Clone the repository**
+1) Clone the repository
+
 ```bash
 git clone <repository-url>
 cd ReSo/
 ```
 
-2. **Set up environment**
+2) Create and activate environment
+
 ```bash
-conda create -n ReSo python=3.10
+conda create -n ReSo python=3.10 -y
 conda activate ReSo
 pip install -r requirements.txt
 ```
 
-3. **Configure API Keys**
+3) Configure API keys (optional, if using external LLMs)
 
-Create a `.env` file from the template:
+Create and edit your environment file:
+
 ```bash
 cp .env.template .env
 ```
 
-Edit the `.env` file with your API credentials:
+Fill `.env` with your credentials:
+
 ```bash
-# OpenAI Configuration
+# OpenAI
 OAI_API_KEY=your_openai_api_key
 OAI_BASE_URL=https://api.openai.com/v1
 
-# Qwen Configuration  
+# Qwen
 QWEN_API_KEY=your_qwen_api_key
 QWEN_BASE_URL=your_qwen_base_url
 
-# Claude Configuration
+# Claude
 CLAUDE_API_KEY=your_claude_api_key
 CLAUDE_BASE_URL=your_claude_base_url
 
-# Gemini Configuration
+# Gemini
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_BASE_URL=your_gemini_base_url
 
-# DeepSeek Configuration
+# DeepSeek
 DEEPSEEK_API_KEY=your_deepseek_api_key
 DEEPSEEK_BASE_URL=your_deepseek_base_url
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ReSo/
 ├── ReSo/                    # Core framework modules
 │   ├── agent_graph/         # Agent graph implementation
-│   ├── llm_agent/          # LLM agent components
-│   ├── model/              # Custom model implementations
-│   └── task_graph/         # Task graph management
-├── datasets/               # Data synthesis and storage
-│   ├── data_gen.py        # Complex problem generator
-│   ├── get_answer.py      # Answer extraction utilities
-│   ├── sub_question/      # Base sub-question datasets
-│   ├── MATH-MAS/         # MATH Multi-Agent System datasets
-│   └── Scibench-MAS/     # Science benchmark datasets
-├── experiments/           # Training and evaluation scripts
-├── reward_model/         # Reward model training
-├── config.ini           # Model agent configuration
-├── config_hyper.ini     # Hyperparameter configuration
-└── requirements.txt     # Python dependencies
+│   ├── llm_agent/           # LLM agent components
+│   ├── model/               # Custom model implementations
+│   └── task_graph/          # Task graph management
+├── datasets/                # Data synthesis and storage
+│   ├── data_gen.py          # Complex problem generator
+│   ├── get_answer.py        # Answer extraction utilities
+│   ├── sub_question/        # Base sub-question datasets
+│   ├── MATH-MAS/            # MATH MAS datasets
+│   └── Scibench-MAS/        # Science benchmark datasets
+├── experiments/             # Training and evaluation scripts
+├── reward_model/            # Reward model training & usage
+├── config.ini               # Model & agent configuration
+├── config_hyper.ini         # Training hyperparameters
+└── requirements.txt         # Python dependencies
 ```
 
-## 🔧 Configuration
+# 🎯 Usage
 
-### Model Configuration
+## Training
 
-Edit `config.ini` to modify model agent settings:
-- Model selection and parameters
-- Agent behavior configurations
-- API endpoints and settings
-
-### Hyperparameters
-
-Adjust `config_hyper.ini` for:
-- Training hyperparameters
-- Optimization settings
-- Performance tuning parameters
-
-## 🎯 Usage
-
-### Training
-
-Train the ReSo model on your dataset:
+Train on your dataset:
 
 ```bash
 python experiments/train_ReSo.py --dataset_path <path_to_training_data>
 ```
 
-**Parameters:**
-- `--dataset_path`: Path to the training dataset
-- Additional training parameters can be configured in `config_hyper.ini`
+Notes:
+- Configure training hyperparameters in `config_hyper.ini`.
+- Adjust model/agent settings in `config.ini`.
 
-### Evaluation
+## Evaluation
 
-#### MATH-MAS Evaluation
-
-Test the model on MATH-MAS benchmarks:
+MATH-MAS benchmarks:
 
 ```bash
-# Easy difficulty
+# Easy
 python experiments/test_ReSo.py --dataset_path datasets/MATH-MAS/MATH-MAS-Easy.json --plan_mode gt
 
-# Medium difficulty  
+# Medium
 python experiments/test_ReSo.py --dataset_path datasets/MATH-MAS/MATH-MAS-Medium.json --plan_mode gt
 
-# Hard difficulty
+# Hard
 python experiments/test_ReSo.py --dataset_path datasets/MATH-MAS/MATH-MAS-Hard.json --plan_mode gt
 ```
 
-**Parameters:**
-- `--dataset_path`: Path to the test dataset
-- `--plan_mode`: Planning mode (`gt` for ground truth)
-- `--random_select`: Enable random selection (optional)
-- `--error_tolerance`: Set error tolerance threshold (optional)
-
-#### GSM8K Evaluation
+GSM8K:
 
 ```bash
 python experiments/test_gsm8k.py --dataset_path <gsm8k_dataset_path>
 ```
 
-## 📊 Data Generation
+Common flags:
+- `--dataset_path`: Path to dataset file
+- `--plan_mode`: Planning mode (`gt` for ground truth)
+- `--random_select`: Randomized selection (optional)
+- `--error_tolerance`: Error threshold (optional)
 
-### Multi-Agent System (MAS) Dataset Creation
+# 📊 Data Generation
 
-The framework includes a sophisticated data synthesis module for creating complex multi-step mathematical problems.
+Create complex multi-step problems using the generator.
 
-#### 1. Prepare Sub-question Datasets
+### 1) Prepare base sub-questions
 
-Base sub-questions are stored in `datasets/sub_question/`:
-- `math_test.json`: Mathematical problem sub-questions
-- `scibench.json`: Science benchmark sub-questions
+Location: `datasets/sub_question/`
+- `math_test.json` (math)
+- `scibench.json` (science)
 
-Each sub-question includes:
-- Original problem statement
-- Ground-truth answer
-- Variable placeholders for dependency injection
-- Metadata (difficulty, category, etc.)
+Each entry contains a prompt, answer, variables, and metadata.
 
-#### 2. Generate Complex Problems
-
-Create complex multi-step problems using the data generator:
+### 2) Generate complex problems
 
 ```bash
 python datasets/data_gen.py -n <num_questions> -c <complexity_level> [-o <output_file>]
 ```
 
-**Parameters:**
-- `-n, --num_questions`: Number of complex questions to generate
-- `-c, --complexity`: Complexity level (number of sub-questions to combine)
-- `-o, --output`: Output file path (optional, auto-generates with timestamp)
+Examples:
 
-**Examples:**
 ```bash
-# Generate 100 questions with 3 sub-questions each
+# 100 questions, 3 sub-questions
 python datasets/data_gen.py -n 100 -c 3
 
-# Generate 50 highly complex questions (5 sub-questions each)
+# 50 questions, 5 sub-questions, custom output
 python datasets/data_gen.py -n 50 -c 5 -o datasets/mixed/complex_dataset.json
 ```
 
-#### 3. Data Generation Process
+### 3) How it works
 
-The system creates complex problems by:
-1. **DAG Construction**: Generates random Directed Acyclic Graphs to define question dependencies
-2. **Question Linking**: Links sub-questions where child questions depend on parent answers
-3. **Integration**: Creates final tasks that combine all sub-question answers
-4. **Validation**: Ensures numerical consistency and solvability
+1. DAG construction for dependency structure
+2. Linking sub-questions via variables/answers
+3. Integration into a final composite task
+4. Validation for consistency and solvability
 
-For detailed information about the data synthesis process, see [`datasets/README.md`](datasets/README.md).
+See `datasets/README.md` for details.
 
-## 🤖 Pre-trained Models
+# 🤖 Pre-trained Models
 
-We provide fine-tuned **Plan** and **CRM** models on [Hugging Face](https://huggingface.co/henggg/ReSo/tree/main):
+We provide fine-tuned models on Hugging Face:
+- Plan model for multi-step planning
+- CRM (Critic-Reward Model) for evaluation and optimization
 
-- **Plan Model**: Specialized for multi-step planning in mathematical reasoning
-- **CRM Model**: Critic-Reward Model for solution evaluation and optimization
+Browse: https://huggingface.co/henggg/ReSo/tree/main
 
-### Using Pre-trained Models
+# 🔬 Key Features
 
-```python
-from transformers import AutoModel, AutoTokenizer
+## Multi-Agent Reasoning
+- Agent graph for structured collaboration
+- Automatic task decomposition
+- Coordinated solving across agents
 
-# Load Plan model
-plan_model = AutoModel.from_pretrained("henggg/ReSo-Plan")
-plan_tokenizer = AutoTokenizer.from_pretrained("henggg/ReSo-Plan")
+## Self-Optimization
+- Reward modeling for quality assessment
+- Iterative refinement and error detection
+- Supports custom reward models
 
-# Load CRM model  
-crm_model = AutoModel.from_pretrained("henggg/ReSo-CRM")
-crm_tokenizer = AutoTokenizer.from_pretrained("henggg/ReSo-CRM")
-```
+## Flexible Architecture
+- Modular design for new models/strategies
+- Multiple LLM providers (OpenAI, Claude, Gemini, Qwen, DeepSeek, etc.)
+- Configurable pipelines and behaviors
 
-## 🔬 Key Features
+# 📈 Performance
 
-### Multi-Agent Reasoning
-- **Agent Graph**: Structured representation of reasoning agents
-- **Task Decomposition**: Automatic breakdown of complex problems into sub-tasks
-- **Collaborative Solving**: Multiple agents work together on different problem aspects
+ReSo shows strong performance on MATH, GSM8K, and science benchmarks. Refer to the paper for full metrics.
 
-### Self-Optimization
-- **Reward Modeling**: Custom reward models for solution quality assessment
-- **Iterative Improvement**: Solutions are refined through multiple iterations
-- **Error Detection**: Automatic identification and correction of reasoning errors
+# 🛠️ Development
 
-### Flexible Architecture
-- **Modular Design**: Easy to extend with new models and strategies
-- **API Integration**: Support for multiple LLM providers (OpenAI, Claude, Gemini, etc.)
-- **Configurable Pipelines**: Customizable reasoning and optimization workflows
+## Add a new model
+1. Implement interface in `ReSo/llm_agent/`
+2. Add options in `config.ini`
+3. Register in `ReSo/llm_agent/model_info.py`
 
-## 📈 Performance
+## Custom reward models
+1. Define architecture in `ReSo/model/`
+2. Implement training in `reward_model/train.py`
+3. Add evaluation in `reward_model/test.py`
 
-The ReSo framework achieves state-of-the-art results on:
-- **MATH Dataset**: Competitive performance on mathematical reasoning tasks
-- **GSM8K**: Strong results on grade school mathematics problems  
-- **Science Benchmarks**: Effective on multi-domain scientific reasoning
+## Extend data generation
+1. Add formats in `datasets/sub_question/`
+2. Update logic in `datasets/data_gen.py`
+3. Update parsing in `datasets/get_answer.py`
 
-## 🛠️ Development
+# 🤝 Contributing
 
-### Adding New Models
+Issues and PRs are welcome. Please follow standard code style, add tests when changing behavior, and update docs when relevant.
 
-1. Implement model interface in `ReSo/llm_agent/`
-2. Add configuration options in `config.ini`
-3. Update model registry in `model_info.py`
+# 📨 Contact
 
-### Custom Reward Models
+- Open an issue on GitHub
+- Email: zhouheng@pjlab.org.cn
 
-1. Define model architecture in `ReSo/model/`
-2. Implement training logic in `reward_model/train.py`
-3. Add evaluation metrics in `reward_model/test.py`
+# 🎈 Citation
 
-### Extending Data Generation
-
-1. Add new sub-question formats in `datasets/sub_question/`
-2. Modify generation logic in `datasets/data_gen.py`
-3. Update answer parsing in `datasets/get_answer.py`
-
-## 📝 Citation
-
-If you use ReSo in your research, please cite our paper:
+If you find ReSo helpful, please cite our paper:
 
 ```bibtex
-@article{reso2024,
-  title={ReSo: Reasoning with Self-Optimization for Mathematical Problem Solving},
-  author={[Authors]},
-  journal={[Journal]},
-  year={2024}
+@article{zhou2025reso,
+  title={ReSo: A reward-driven self-organizing llm-based multi-agent system for reasoning tasks},
+  author={Zhou, Heng and Geng, Hejia and Xue, Xiangyuan and Kang, Li and Qin, Yiran and Wang, Zhiyong and Yin, Zhenfei and Bai, Lei},
+  journal={arXiv preprint arXiv:2503.02390},
+  year={2025}
 }
 ```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our contributing guidelines for details on:
-- Code style and standards
-- Testing requirements
-- Documentation expectations
-- Pull request process
-
-## 📜 License
-
-This project is licensed under [License Name] - see the LICENSE file for details.
-
-## 🔗 Links
-
-- [Paper](link-to-paper)
-- [Hugging Face Models](https://huggingface.co/henggg/ReSo/tree/main)
-- [Documentation](link-to-docs)
-- [Issues](link-to-issues)
-
-## 📞 Contact
-
-For questions and support:
-- Create an issue on GitHub
-- Contact: [email]
-- Project maintainers: [names]
