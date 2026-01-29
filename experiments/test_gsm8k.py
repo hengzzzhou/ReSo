@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from ReSo.llm_agent.llm_agent import LLMAgent
 from ReSo.task_graph.task_graph import TaskGraph
 from ReSo.agent_graph.agent_graph import AgentGraph
-from datasets.get_answer import equiv, parse_math_answer,load_gsmhard_dataset,load_dataset
+from dataset.get_answer import equiv, parse_math_answer,load_gsmhard_dataset,load_dataset
 
 
 # Configure logging
@@ -28,7 +28,7 @@ async def main():
     """
     # Argument parser configuration
     parser = argparse.ArgumentParser(description="Test in GSM8K dataset")
-    parser.add_argument('--dataset_path', type=str, default="datasets/gsm8k/gsm8k.jsonl")
+    parser.add_argument('--dataset_path', type=str, default="dataset/gsm8k/gsm8k.jsonl")
     parser.add_argument('--random_select', action='store_true', default=False)
     parser.add_argument('--plan_mode', type=str, default="gt")
     parser.add_argument("--error_tolerance", type=float, default=0.01)
